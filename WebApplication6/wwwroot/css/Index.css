@@ -1,0 +1,157 @@
+.headerline {
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.Basket {
+    position: relative;
+    border-right: 3px solid white;
+    padding-right: 105px;
+    height: 200px;
+}
+
+.imgBasket {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.phonediv {
+    position: relative;
+    height: 80px;
+}
+
+.phone {
+    position: relative;
+}
+
+.phonenumbe {
+    position: absolute;
+    top: 10px;
+}
+
+.phone {
+    position: relative;
+    border-right: 3px splid white;
+    height: 200px;
+    width: 400px;
+}
+
+.phoneimg {
+    position: absolute;
+    top: 40px;
+    width: 125px;
+    height: 113px;
+}
+
+.phoneholder {
+    top: 50px;
+    height: 200px;
+    top: 100 px;
+    display: flex;
+    border-right: 3px solid white;
+}
+
+.num {
+    left: 125px;
+    position: absolute;
+    top: 40px;
+    right: 300 px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.phone-text {
+    position: absolute;
+    top: 500 px;
+    left: 150px;
+    font-size: 26px;
+    font-weight: 600;
+    color: white;
+}
+
+div {
+    color: white;
+}
+
+.navitem {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 26px;
+    margin-right: 25px;
+}
+
+.Icon {
+    padding-left: 130px;
+    padding-bottom: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 56px;
+    margin-right: 25px;
+}
+
+.store {
+    height: 100vh;
+    background-image: url(/RepositoriiDark/Body.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Text-lead {
+    text-align: center;
+   justify-content: center;
+    color: black;
+    font-size: 56px;
+    font-weight: 500px;
+}
+
+.rowproduct {
+
+    margin-top:25px;
+    margin-right: 25px;
+    position: relative;
+    background-color: black;
+    top:100px;
+    width: 440px;
+    height: 510px;
+}
+
+.text {
+    position: absolute;
+    left: 5px;
+    top: 300px;
+    line-height: 5px;
+}
+
+.imgproduct {
+    width: 440px;
+    height: 300px;
+}
+
+.text-product {
+    margin-bottom: 1px;
+}
+
+.buy-product {
+    position: absolute;
+    left: 5px;
+    top: 450px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.store {
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+}

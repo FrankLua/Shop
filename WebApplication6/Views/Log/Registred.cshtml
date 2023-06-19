@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model WebApplication6.Models.RegisterModel
+<body class="card-body">
+    <h4>Registracia</h4>
+    <hr/>
+    <div class ="row" style="color:gray">
+        <form asp-action="Registred" asp-controller="Log" method="post">
+        <div class="col-md-4"
+        
+            <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>            
+              <ul typeof="squaer">
+                    <li colspan="2"><input type="submit" value="Зарегистрироваться" /></li>
+
+                </ul>
+
+            
+        
+         </div>
+    </form>
+</body>

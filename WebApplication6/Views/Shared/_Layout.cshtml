@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication6</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApplication6.styles.css" asp-append-version="true" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />    
+</head>
+<body>
+    <div class="header">
+        <div class="container1">
+
+
+            <div class=headerline>
+                <div class="headerlogo">
+                    <img src="/RepositoriiDark/logo.PNG">
+                </div>
+                <div class="Menclass">
+                    <a class="navitem" href="/Shop/DarkStore">На главную</a>
+                    <a class="navitem" href="/Log/Registred">Зарегистрироваться</a>
+                    <a class="navitem" href="/Log/Login">Вход</a>
+                    <a class="navitem" href="/Log/Logout">Выход</a>
+                    <a class="navitem" href="/PersonInfo/PersonCabinet">Личный кабинет</a>
+                </div>
+                <div class="Basket">
+                    <a href="#">
+                        <img class="imgBasket" src="/RepositoriiDark/Basket.PNG">
+                    </a>
+
+                </div>
+                <div class="phone">
+                    <div class="phoneholder">
+                        <div class="phonediv">
+                            <a href="#">
+                                <img class="phoneimg" src="/RepositoriiDark/Phone.PNG">
+                            </a>
+                        </div>
+                        <div class=phonenumber><a class="num" href="#">8-913-282-43-31 <br>Свяжитесь с нашим<br> менеджером!</a></div>
+
+                    </div>
+
+                </div>
+                <div class="Icon">
+                    DarkStore
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div >
+        <main role="main" >
+            @RenderBody()
+        </main>
+    </div>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

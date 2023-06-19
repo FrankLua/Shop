@@ -1,0 +1,84 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+@model WebApplication6.Models.Product
+<head>
+    
+</head>
+<body 
+    class="row mt-5 mb-2 ">
+    <div>
+        @if (ViewBag.Aunteficated == true)
+        {       
+            @if (ViewBag.Role.Name == "admin")
+            {
+                <a href="/NewData/EditProduct/@Model.Id">Редактор продукта </a>
+            }  
+        }
+
+
+    </div>
+    <div class="img">
+        <img class="img-thumbnail" src="@Model.SubPreview" alt="@Model.Title" />
+    </div>
+    <div class="ProdyctInfo"> Информация        
+        <p>Имя:@Model.Title</p>
+        <p>Страна производства: @Model.Country.Name</p>
+        <p>Описание:@Model.FullDescription</p>
+        <p>Краткое описание: @Model.LiteDescription</p>
+        <p>Цена:@Model.Price</p>
+        <p>Количество на складе @Model.Count</p>
+        <a href="/Shop/Buy/@Model.Id">Добавить в корзину</a>
+    </div>
+    <div>
+        Отзывы : @foreach (var item2 in Model.Productcomment)
+        {
+            <div>@item2.NickName</div>
+           
+            <div> @item2.Data</div>
+            <div> @item2.Comments </div>
+            <div>@if (item2.Review == true)
+                {
+                    <p>Пользователь рекомендует продукт</p>
+                }
+                else
+                {
+                    <p> Пользователь не рекомендует</p>
+                } </div>
+        }
+    </div>
+
+    @if (ViewBag.Aunteficated == true)
+    {
+
+
+
+        <form method="post" action="">
+            <div>
+
+                <input type="hidden" name="ProductId" value="@Model.Id" />
+                <input type="hidden" name="ProductName" value="Model.title" />
+                <input type="hidden" name="UserId" value="@ViewBag.user.Id" />
+                <input type="hidden" name="NickName" value="@ViewBag.user.UserName" />
+                <li>Написать свой отзыв: <input type="text" name="Comments" /></li>
+                <li>Рекомендуете ли вы этот товар</li>
+                <li>Да <input type="radio" name="Review" value="true">  Нет <input type="radio" name="Review" value="0">  </li>
+                <ul typeof="squaer">
+                    <li colspan="2"><input type="submit" value="Отправить" /></li>
+
+                </ul>
+            </div>
+        </form>
+    }
+    else
+    {
+        <div> Вы ещё не авторизовались и оставлять коментарии не можете.</div>
+    }
+
+
+    
+
+
+    
+
+</body>

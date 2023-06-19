@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<body>
+    <div>
+        @if (Model.Basket.Count == 0)
+        {
+            <p>Корзина пуста :,[</p>
+        }
+        
+        else
+        {
+            if (Model.BasketAction.Count >= 1)
+            
+            {
+                <p>Товары в корзине</p>
+                @foreach (var item in Model.BasketAction)
+                {
+                    
+                    <li>Код продукта:@item.IdProduct</li>
+                    <li>Количество @item.Quantity</li>
+                    <li>Наименование товара: @item.Product.title</li>
+                    <li>Количество на складе: @item.Product.Count</li>
+                    <li>Цена товара: @item.Product.Price</li>
+                }       }
+
+            if (Model.BasketPaid.Count >= 1)
+            {
+                <p>Оплаченные заказы</p>
+                @foreach (var item in Model.BasketPaid)
+                {
+                    
+                    <li>Код продукта:@item.IdProduct</li>
+                    <li>Количество @item.Quantity</li>
+                    <li>Наименование товара: @item.Product.title</li>
+                    <li>Количество на складе: @item.Product.Count</li>
+                    <li>Цена товара: @item.Product.Price</li>
+                }
+            }
+
+        
+        }
+
+    </div>
+    
+    <div>
+        <a href="/PersonInfo/OrderOk" style="color:black;background: white;padding: 10px;
+    font-family: CURSIVE;
+    text-decoration: none;
+    border-radius: 18px;">Оформить заказы из корзины </a>
+    </div>
+
+
+</body>

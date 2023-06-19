@@ -1,0 +1,12 @@
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\obj\Debug\net6.0\DarkStore.Domain.csproj.AssemblyReference.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\obj\Debug\net6.0\DarkStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\obj\Debug\net6.0\DarkStore.Domain.AssemblyInfoInputs.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\obj\Debug\net6.0\DarkStore.Domain.AssemblyInfo.cs
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\obj\Debug\net6.0\DarkStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\bin\Debug\net6.0\DarkStore.Domain.deps.json
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\bin\Debug\net6.0\DarkStore.Domain.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\bin\Debug\net6.0\DarkStore.Domain.pdb
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\obj\Debug\net6.0\DarkStore.Domain.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\obj\Debug\net6.0\refint\DarkStore.Domain.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\obj\Debug\net6.0\DarkStore.Domain.pdb
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.Domain\obj\Debug\net6.0\ref\DarkStore.Domain.dll

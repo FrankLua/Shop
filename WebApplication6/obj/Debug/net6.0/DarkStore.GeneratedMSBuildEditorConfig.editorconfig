@@ -1,0 +1,81 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = DarkStore
+build_property.RootNamespace = DarkStore
+build_property.ProjectDir = C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/Log/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/Log/Registred.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9nXFJlZ2lzdHJlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/NewData/EditProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGF0YVxFZGl0UHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/NewData/NewProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3RGF0YVxOZXdQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/PersonInfo/OrderOk.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uSW5mb1xPcmRlck9rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/PersonInfo/PersonBasket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uSW5mb1xQZXJzb25CYXNrZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/PersonInfo/Personcabinet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uSW5mb1xQZXJzb25jYWJpbmV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/PersonInfo/PersonEditor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uSW5mb1xQZXJzb25FZGl0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/Shop/Buy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxCdXkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/Shop/DarkStore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxEYXJrU3RvcmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/Shop/Page.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/sosis/OneDrive/Рабочий стол/2323/WebApplication6/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-r2323b0bad

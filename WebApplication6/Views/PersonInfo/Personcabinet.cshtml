@@ -1,0 +1,36 @@
+﻿@using DarkStore.Domain.Entity;
+@Model DarkStore.Domain.Entity.User;
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="col-lg-4">
+    <a href="/PersonInfo/PersonEditor"> Редактор профиля. </a>
+    <a href="/PersonInfo/PersonBasket"> Корзина. </a>
+    <p>Ваш ник: @Model.UserName</p>
+    <p>Ваша роль: @Model.Role.Name</p>
+    <p>Ваш адресс эл почты: @Model.Email</p>
+    <div>Ваши отзывы на продукты: @foreach(FeedBack item in Model.Comments)
+        {
+            <p>Продукт на который был оставлен отзыв: @item.ProductName</p>
+            <p>Время: @item.Data</p>
+            <p>Рекомендуете ли вы : @if (item.Review == true) {<p> Да рекомендую</p> }
+            else{<p>нет не рекомендую</p>}</p>
+            <p>Комментарии отзыва: @item.Comments</p>
+        }
+    </div>  
+    <form>
+        <p></p>
+
+
+
+
+    </form>
+    </div>
+<div  style="right"><centre><img class="img-thumbnail" src="@Model.Img"</centre></div>
+
+    
+
+
+   

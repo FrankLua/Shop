@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+
+<head>
+    <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
+</head>
+
+
+
+<h1 class="Text-lead">Рабы</h1>
+    <div class="store">
+        
+        
+    @foreach (var item in Model)
+    {
+        <div class="rowproduct">
+            <div class="prduct">
+                <img class="imgproduct" src="@item.SubPreview">
+            </div>
+            <div class="text">
+                <h2 class="text-product">Название:@item.Title</h2>
+                <h2 class="text-product">Описание:@item.LiteDescription</h2>
+                <h2 class="text-product">Цена:@item.Price</h2>
+
+            </div>
+            <a class="buy-product" href="/Shop/Page/@item.Id">Узнать подробнее</a>
+
+
+        </div>
+
+            
+
+
+    }
+    </div>
+    
+
+
+

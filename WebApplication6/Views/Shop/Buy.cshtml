@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+@model DarkStore.Domain.Entity.BasketModel
+
+<div class="card col-md-12" style="background:gray">      
+        <form asp-action = "Buy" asp-controller="Shop" method="post">    
+           
+            <input type="hidden" name="IdProduct" value="@ViewBag.product.Id" />
+            <input type="hidden" name="UserId" value="@ViewBag.user.Id" />
+            <div asp-validation-summary = "All" style= "font-size:23px; font-family:Impact; color:black" class = "text-center" > </div>
+                <div>
+                    <lable>Количество</lable>
+                    <input type="number" asp-for = "Quantity" class="form-control" />
+                </div>
+        <div typeof="squaer">
+            <li colspan="2"><input type="submit" value="Добавить заказ в корзину" /></li>
+
+        </div>
+            
+        </form>
+
+
+
+    </div>
+</div>
+

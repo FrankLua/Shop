@@ -1,0 +1,182 @@
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\appsettings.json
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\WebApplication6.staticwebassets.runtime.json
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\WebApplication6.exe
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\WebApplication6.deps.json
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\WebApplication6.runtimeconfig.json
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\WebApplication6.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\WebApplication6.pdb
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.csproj.AssemblyReference.cache
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.AssemblyInfoInputs.cache
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.AssemblyInfo.cs
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.csproj.CoreCompileInputs.cache
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.RazorAssemblyInfo.cache
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.RazorAssemblyInfo.cs
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\staticwebassets\msbuild.WebApplication6.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\staticwebassets\msbuild.build.WebApplication6.props
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApplication6.props
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApplication6.props
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\scopedcss\bundle\WebApplication6.styles.css
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\scopedcss\projectbundle\WebApplication6.bundle.scp.css
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\refint\WebApplication6.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.pdb
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.genruntimeconfig.cache
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\ref\WebApplication6.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Dapper.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\obj\Debug\net6.0\WebApplication6.csproj.CopyComplete
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Json.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Humanizer.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\sosis\source\repos\WebApplication6\WebApplication6\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\sosis\source\repos\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.csproj.AssemblyReference.cache
+C:\Users\sosis\source\repos\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.dll
+C:\Users\sosis\source\repos\2323\WebApplication6\obj\Debug\net6.0\refint\WebApplication6.dll
+C:\Users\sosis\source\repos\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.pdb
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\appsettings.json
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\WebApplication6.staticwebassets.runtime.json
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\WebApplication6.exe
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\WebApplication6.deps.json
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\WebApplication6.runtimeconfig.json
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\WebApplication6.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\WebApplication6.pdb
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Dapper.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Humanizer.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Json.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.csproj.AssemblyReference.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.AssemblyInfoInputs.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.AssemblyInfo.cs
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.csproj.CoreCompileInputs.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.RazorAssemblyInfo.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.RazorAssemblyInfo.cs
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\staticwebassets\msbuild.WebApplication6.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\staticwebassets\msbuild.build.WebApplication6.props
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApplication6.props
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApplication6.props
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\scopedcss\bundle\WebApplication6.styles.css
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\scopedcss\projectbundle\WebApplication6.bundle.scp.css
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.csproj.CopyComplete
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\refint\WebApplication6.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.pdb
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\WebApplication6.genruntimeconfig.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\ref\WebApplication6.dll

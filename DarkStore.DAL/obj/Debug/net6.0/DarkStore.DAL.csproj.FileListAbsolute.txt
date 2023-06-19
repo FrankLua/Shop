@@ -1,0 +1,15 @@
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\bin\Debug\net6.0\DarkStore.DAL.deps.json
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\bin\Debug\net6.0\DarkStore.DAL.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\bin\Debug\net6.0\DarkStore.DAL.pdb
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\bin\Debug\net6.0\DarkStore.Domain.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\bin\Debug\net6.0\DarkStore.Domain.pdb
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\obj\Debug\net6.0\DarkStore.DAL.csproj.AssemblyReference.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\obj\Debug\net6.0\DarkStore.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\obj\Debug\net6.0\DarkStore.DAL.AssemblyInfoInputs.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\obj\Debug\net6.0\DarkStore.DAL.AssemblyInfo.cs
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\obj\Debug\net6.0\DarkStore.DAL.csproj.CoreCompileInputs.cache
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\obj\Debug\net6.0\DarkStore.DAL.csproj.CopyComplete
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\obj\Debug\net6.0\DarkStore.DAL.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\obj\Debug\net6.0\refint\DarkStore.DAL.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\obj\Debug\net6.0\DarkStore.DAL.pdb
+C:\Users\sosis\OneDrive\Рабочий стол\2323\DarkStore.DAL\obj\Debug\net6.0\ref\DarkStore.DAL.dll
