@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+<heder>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/AdminOrders.css">
+    <link rel="stylesheet" href="~/css/Page.css">
+</heder>
+<body>
+    <div class="container">
+        <section class="window_main">
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Номер Заказа</th>
+                            <th>Фамилия и имя клиента</th>
+                            <th>Фамилия и имя фотографа</th>
+                            <th>Пожелания клиента</th>
+                            <th>Номер телефона клиента</th>
+                            <th>Дата</th>
+                            <th>Проверенно ли админом</th>
+                            <th>Проверенно</th>
+                        </tr>
+                    </thead>
+                    @foreach (var item in Model)
+                    {
+                        <tbody>
+                        <td class="tb_iacheka">@item.Id</td>
+                        <td class="tb_iacheka">@item.FirstNameUser @item.SecondNameUser</td>
+                        <td class="tb_iacheka">@item.ProductName</td>
+                        <td class="tb_iacheka">
+                                @item.DescriptionUser
+                        </td>
+                        <td class="tb_iacheka">@item.UserNumberPhone</td>
+                        <td class="tb_iacheka">@item.UserDate</td>
+                            @if (item.State == true)
+                            {
+                            <td class="tb_iacheka"><img src="~/Images/WebPages/PersonCab/free-icon-checked-152593.png" alt=""></td>
+                            
+                            }
+                            else
+                            {
+                            <td class="tb_iacheka">
+                                <img src="~/Images/WebPages/PersonCab/free-icon-unchecked-152592.png" alt="">                                
+                            </td>
+                            
+                            <td class="tb_iacheka">
+                                <form asp-action="BasketUpdate" asp-controller="PersonInfo" method="post" method="post">
+                                    <div class="modal_window_inpute">
+                                        <input style="display:none" name="Id" type="text" placeholder="Ваше имя" value="@item.Id"></input>
+                                        <input style="display:none" name="ProductId" type="text" placeholder="Ваше имя" value="@item.ProductId"></input>
+                                        <input style="display:none;" name="UserId" type="text" placeholder="Ваше имя" value="@item.UserId"></input>
+                                        <input style="display:none;" name="FirstNameUser" type="text" placeholder="Ваше имя" value="@item.FirstNameUser"></input>
+                                        <input style="display:none;" name="SecondNameUser" type="text" placeholder="Ваша фамилия" value="@item.SecondNameUser"></input>
+                                        <input style="display:none;" name="UserEmail" type="text" placeholder="Ваш Емайл" value="@item.UserEmail"></input>
+                                        <input style="display:none;" name="UserNumberPhone" type="text" placeholder="Ваш номер телефона" id="phone" value="@item.UserNumberPhone"></input>
+                                        <input style="display:none;" name="UserDate" type="text" placeholder="Ваш номер телефона" id="phone" value="@item.UserDate">
+                                        <input style="display:none;" name="DescriptionUser" type="text" placeholder="Ваш номер телефона"  value="@item.DescriptionUser"></input>
+                                        <input style="display:none;" name="ProductName" type="text" placeholder="Ваш номер телефона" value="@item.ProductName"></input>
+                                        </div>
+                                    <button class="form_button_button">Подтвердить проверку</button>
+                                </form>
+                            </td>
+                            
+                                
+                            
+                            
+                            }
+
+                        </tbody>
+
+                    }
+
+                    </table>
+                   
+                
+            </div>
+        </section>
+    </div>
+
+</body>

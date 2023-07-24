@@ -2,83 +2,461 @@
     Layout = "/Views/Shared/_Layout.cshtml";
 }
 @model WebApplication6.Models.Product
-<head>
+
+<head>   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="~/css/Page.css" asp-append-version="true" />   
+    <title>Document</title>
     
 </head>
-<body 
-    class="row mt-5 mb-2 ">
-    <div>
-        @if (ViewBag.Aunteficated == true)
-        {       
-            @if (ViewBag.Role.Name == "admin")
-            {
-                <a href="/NewData/EditProduct/@Model.Id">Редактор продукта </a>
-            }  
-        }
-
-
-    </div>
-    <div class="img">
-        <img class="img-thumbnail" src="@Model.SubPreview" alt="@Model.Title" />
-    </div>
-    <div class="ProdyctInfo"> Информация        
-        <p>Имя:@Model.Title</p>
-        <p>Страна производства: @Model.Country.Name</p>
-        <p>Описание:@Model.FullDescription</p>
-        <p>Краткое описание: @Model.LiteDescription</p>
-        <p>Цена:@Model.Price</p>
-        <p>Количество на складе @Model.Count</p>
-        <a href="/Shop/Buy/@Model.Id">Добавить в корзину</a>
-    </div>
-    <div>
-        Отзывы : @foreach (var item2 in Model.Productcomment)
-        {
-            <div>@item2.NickName</div>
-           
-            <div> @item2.Data</div>
-            <div> @item2.Comments </div>
-            <div>@if (item2.Review == true)
-                {
-                    <p>Пользователь рекомендует продукт</p>
-                }
-                else
-                {
-                    <p> Пользователь не рекомендует</p>
-                } </div>
-        }
-    </div>
-
-    @if (ViewBag.Aunteficated == true)
-    {
-
-
-
-        <form method="post" action="">
-            <div>
-
-                <input type="hidden" name="ProductId" value="@Model.Id" />
-                <input type="hidden" name="ProductName" value="Model.title" />
-                <input type="hidden" name="UserId" value="@ViewBag.user.Id" />
-                <input type="hidden" name="NickName" value="@ViewBag.user.UserName" />
-                <li>Написать свой отзыв: <input type="text" name="Comments" /></li>
-                <li>Рекомендуете ли вы этот товар</li>
-                <li>Да <input type="radio" name="Review" value="true">  Нет <input type="radio" name="Review" value="0">  </li>
-                <ul typeof="squaer">
-                    <li colspan="2"><input type="submit" value="Отправить" /></li>
-
-                </ul>
+<body>
+    <div class="wrapper">
+        <div class="full_screen">
+            <div class="full_screen_body">
+                <h2 class="full_screen_title">
+                    Начни фотоссесию с нашими фотографами!
+                </h2>
             </div>
-        </form>
-    }
-    else
-    {
-        <div> Вы ещё не авторизовались и оставлять коментарии не можете.</div>
-    }
+            <video autoplay muted loop preload="auto" class="page_video"
+                   src="/Video/WebPages/Page/coverr-male-photographer-in-a-jungle-7641-1080p.mp4">
+            </video>
+        </div>
+
+        <section class="product">
+            <div class="product_row">
+                <div class="product_foto_div">
+                    <img class="product_foto" src="@Model.SubPreview" alt="">
+                </div>
+                <div class="info">
+                    <h2 style="font-size: 42px; padding: 0 0 5% 0;">@Model.Name</h2>
+                    <p style="font-size: 36px;padding: 0 0 5% 0;">
+                        @Model.LiteDescription;
+                    </p>
+                    <p class="product_fulldeskription">
+                        @Model.LiteDescription;
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <div class="product_portfolio_title">
+                <h2 style="padding: 2% 22% 2% 22%;font-size: 36px;text-align: center;">Портфолио @Model.Name</h2>
+            </div>
+            
+            
+                <div class="grid">
+                    <div class="grid-item">
+                        <a data-fslightbox="gallery"
+                        href= "@foreach(var item in Model.ProductPic){if(item.TypeId == 3 && item.Couple==1){@item.Src}}"
+                        class="grid-item">
+                        <img src="@foreach (var item in Model.ProductPic)
+                        {
+                            if (item.TypeId == 2 && item.Couple == 1)
+                            {
+                                @item.Src
+                            }
+                        }"
+                             alt="image">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a data-fslightbox="gallery"
+                       href="@foreach(var item in Model.ProductPic){if(item.TypeId == 3 && item.Couple==2){
+                    @item.Src
+}}"
+                       class="grid-item">
+                        <img src="@foreach (var item in Model.ProductPic)
+                        {
+                            if (item.TypeId == 2 && item.Couple == 2)
+                            {
+                                @item.Src
+                            }
+                        }" alt="">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a data-fslightbox="gallery"
+                       href="@foreach(var item in Model.ProductPic){if(item.TypeId == 3 && item.Couple==3){
+                    @item.Src
+}}"
+                       class="grid-item">
+                        <img src="@foreach (var item in Model.ProductPic)
+                        {
+                            if (item.TypeId == 2 && item.Couple == 3)
+                            {
+                                @item.Src
+                            }
+                        }" alt="">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a data-fslightbox="gallery"
+                       href="@foreach(var item in Model.ProductPic){if(item.TypeId == 3 && item.Couple==4){
+                    @item.Src
+}}"
+                       class="grid-item">
+                        <img src="@foreach (var item in Model.ProductPic)
+                        {
+                            if (item.TypeId == 2 && item.Couple == 4)
+                            {
+                                @item.Src
+                            }
+                        }" alt="">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a data-fslightbox="gallery"
+                       href="@foreach(var item in Model.ProductPic){if(item.TypeId == 3 && item.Couple==5){
+                    @item.Src
+}}"
+                       class="grid-item">
+                        <img src="@foreach (var item in Model.ProductPic)
+                        {
+                            if (item.TypeId == 2 && item.Couple == 5)
+                            {
+                                @item.Src
+                            }
+                        }" alt="image">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a data-fslightbox="gallery"
+                       href="@foreach(var item in Model.ProductPic){if(item.TypeId == 3 && item.Couple==6){
+                    @item.Src
+}}"
+                       class="grid-item">
+                        <img src="@foreach (var item in Model.ProductPic)
+                        {
+                            if (item.TypeId == 2 && item.Couple == 6)
+                            {
+                                @item.Src
+                            }
+                        }" alt="">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a data-fslightbox="gallery"
+                       href="@foreach(var item in Model.ProductPic){if(item.TypeId == 3 && item.Couple==7){
+                    @item.Src
+}}"
+                       class="grid-item">
+                        <img src="@foreach (var item in Model.ProductPic)
+                        {
+                            if (item.TypeId == 2 && item.Couple == 7)
+                            {
+                                @item.Src
+                            }
+                        }" alt="">
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a data-fslightbox="gallery"
+                       href="@foreach(var item in Model.ProductPic){if(item.TypeId == 3 && item.Couple==8){
+                    @item.Src
+}}"
+                       class="grid-item">
+                        <img src="@foreach (var item in Model.ProductPic)
+                        {
+                            if (item.TypeId == 2 && item.Couple == 8)
+                            {
+                                @item.Src
+                            }
+                        }" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </section>
 
 
+        <section class="services">
+            <div class="service_title_div">
+                <h2 class="service_title_text">
+                    Услуги и цены
+                </h2>
+            </div>
+            <div class="service_list_row">
+                <div class="service_row">
+                    <div class="row_img_div">
+                        <img class="service_row_img" src="/Images/WebPages/Page/product_menu1.jpg" alt="">
+                        <div class="service_img_title">
+                            <span>Fine art быстрый</span>
+                        </div>
+                    </div>
+                    <p style="padding: 0 0 0 15px;">ПАКЕТ № 1</p>
+                    <h2 style="padding: 20px 96px 17px 15px;">Fine art быстрый</h2>
+                    <h3 style="padding: 14px 0 14px 15px;">3 500 руб.</h3>
+                    <ul style="padding: 14px 0 14px 30px;">
+                        <li>Фотосъемка 30 минут,</li>
+                        <li>30 фото + 1 выбранный клиентом портрет печатается на холсте формат А3, </li>
+                        <li>Дублирование в черно-белый формат по желанию клиента,</li>
+                        <li>Готовность фотографий в течение 1-го дня,</li>
+                        <li>Передача фотографий через облачное хранение.</li>
+                    </ul>
+                    <p style="padding: 14px 0 14px 15px;">ВАЖНО: </p>
+                    <p style="padding: 14px 0 14px 15px;">
+                        Студия входит в стоимость пакета. работа стилиста и
+                        визажиста оплачиваются отдельно и не входят в указанную стоимость.
+                    </p>
+                    <p style="text-align: center;">
+                        Обратите внимание, что указанная стоимость распространяется на
+                        город Красноярск
+                    </p>
+                </div>
+                <div class="service_row">
+                    <div class="row_img_div">
+                        <img class="service_row_img" src="/Images/WebPages/Page/product_menu2.jpg" alt="">
+                        <div class="service_img_title">
+                            <span>Fine art стандарт</span>
+                        </div>
+                    </div>
+                    <p style="padding: 0 0 0 15px;">ПАКЕТ № 2</p>
+                    <h2 style="padding: 20px 96px 17px 15px;">Fine art стандарт</h2>
+                    <h3 style="padding: 14px 0 14px 15px;">6 000 руб.</h3>
+                    <ul style="padding: 14px 0 14px 30px;">
+                        <li>Фотосъемка 1 час</li>
+                        <li>Индивидуальная проработка концепции </li>
+                        <li>60 фото + 1 выбранный клиентом портрет печатается на холсте формат А2</li>
+                        <li>Дублирование в черно-белый формат по желанию клиента</li>
+                        <li>Готовность фотографий в течение 2-х дней</li>
+                        <li>Передача фотографий через облачное хранение.</li>
+                    </ul>
+                    <p style="padding: 14px 0 14px 15px;">ВАЖНО: </p>
+                    <p style="padding: 14px 0 14px 15px;">
+                        Студия входит в стоимость пакета. работа стилиста и
+                        визажиста оплачиваются отдельно и не входят в указанную стоимость.
+                    </p>
+                    <p style="text-align: center;">
+                        Обратите внимание, что указанная стоимость распространяется на
+                        город Красноярск
+                    </p>
+                </div>
+                <div class="service_row">
+                    <div class="row_img_div">
+                        <img class="service_row_img" src="/Images/WebPages/Page/product_menu3.jpg" alt="">
+                        <div class="service_img_title">
+                            <span>Рекламная фотография</span>
+                        </div>
+                    </div>
+                    <p style="padding: 0 0 0 15px;">ПАКЕТ № 3</p>
+                    <h2 style="padding: 20px 96px 17px 15px;">Рекламная фотография</h2>
+                    <h3 style="padding: 14px 0 14px 15px;">7 000 руб.</h3>
+                    <ul style="padding: 14px 0 14px 30px;">
+                        <li>Фотосъемка 30 минут,</li>
+                        <li>30 фото + 1 выбранный клиентом портрет печатается на холсте формат А3, </li>
+                        <li>Обязательное формирование технического задания</li>
+                        <li>Составление сметы на приобретение необходимого реквизита</li>
+                        <li>Готовность фотографий в течение 3-х дней</li>
+                        <li>Передача фотографий через облачное хранение.</li>
+                    </ul>
+                    <p style="padding: 14px 0 14px 15px;">ВАЖНО: </p>
+                    <p style="padding: 14px 0 14px 15px;">
+                        Студия входит в стоимость пакета. работа стилиста и
+                        визажиста оплачиваются отдельно и не входят в указанную стоимость.
+                    </p>
+                    <p style="text-align: center;">
+                        Обратите внимание, что указанная стоимость распространяется на
+                        город Красноярск
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+        <section class="feedback">
+            <div class="feedback_div">
+                <h2>Отзывы наших клиентов</h2>
+            </div>
+            <div class="faq_item">
+                <input type="checkbox" class="faq_inpute" name="faq" id="faq_1">
+                <label for="faq_1" class="faq_title"> Показать отзывы?</label>
+                <div class="feedback_wrap">
+                
+                    @foreach (var feedback in Model.Productcomment)
+                        {
+
+                        <div class="row">
+                            <div class="img_div">
+                                <img src="@feedback.Usersrc" alt="">
+                            </div>
+                            <div class="info">
+                                <h3>@feedback.FirstName @feedback.SecondName</h3>
+                                <p>
+                                    @feedback.Comments
+                                </p>
+                                <p style="font-size: 20px;">@feedback.Data</p>
+                                @if (feedback.Review == 1)
+                                {
+                                    <p style ="color: green;" class="estimation">Оценка: рекомендую</p>
+                                }
+                                else
+                                {
+                                    <p style ="color: red;"class="estimation">Оценка: не рекомендую</p>
+                                }
+                            </div>
+                            <div class="feedback_img">
+                                @if (feedback.Review == 0)
+                                {
+                                    <img src="~/Images/WebPages/Page/free-icon-dislike-9145083.png" alt="">
+                                }
+                                else
+                                {
+                                    <img src="~/Images/WebPages/Page/free-icon-like-9145118.png" alt="">
+                                }
+                                
+                            </div>
+
+                        </div>
+
+                    }
+                    @if (ViewBag.Aunteficated != false)
+                    {
+                        
+                        
+                            <div class="inpute_div">
+                            <form asp-action="PageComent" asp-controller="Shop" method="post">
+
+                                    <div class="inpute_text_div">
+                                        <input name="UserId" style="visibility: hidden;" type="text" value="@ViewBag.user.Id">
+                                        <input name="SecondName" style="visibility: hidden;" type="text" value="@ViewBag.user.UserName">
+                                        <input name="FirstName" style="visibility: hidden;" type="text" value="@ViewBag.user.SecondName">
+                                        <input name="ProductName" style="visibility: hidden;" type="text" value="@Model.Name">
+                                        <input name="Usersrc" style="visibility: hidden;" type="text" value="@ViewBag.user.SrcImg">
+                                        <input name="ProductId" style="visibility: hidden;" type="text" value="@Model.Id">
+                                        <h3>Оставте свой отзыв</h3>
+                                        <textarea name="Comments" class="textarea" placeholder="Ваш отзыв">
+
+                                        </textarea>
+                                    </div>
+                                    <div class="control_board">
+                                        <label>
+                                            <input class="radio" type="radio" name="Review" value="0">
+                                            <span class="fake2"></span>
+                                            Я не рекомендую
+                                        </label>
+
+                                        <button>
+                                            Оставить отзыв
+
+                                        </button>
+
+                                        <label>
+                                            Я рекомендую
+                                            <input class="radio" type="radio" name="Review" value="1">
+                                            <span class="fake"></span>
+
+                                        </label>
+
+                                    </div>
+                                </form>
+                            </div>
+
+                        
+
+                    }
+                    else
+                    {
+                        <h3>Вы не можете оставить отзыв, авторизуйтесь!</h3>
+                    }
+
+                
+
+                
+
+                    
+                   
+                    
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section class="buy">
+            <div class="buy_row">
+                <div class="buy_title">
+                    <h2 style="font-size: 42px;">Заказать фотосъемку</h2>
+                </div>
+                <div class="buy_paragraf">
+                    <p style="font-size: 24px;">
+                        Для того, чтобы забронировать съемку, заполните контактную форму и я
+                        свяжусь с вами в ближайшее время.
+                    </p>
+                </div>
+                <div class="buy_button_div">
+                    <button class="buy_button_button" data-path="buy">Забронировать дату</button>
+                </div>
+            </div>
+
+        </section>
+
+        @if (ViewBag.Aunteficated != true)
+        {
+            <section class="modals">
+                <div class="modal_overlay">
+                    <div class="modal_window" data-target="buy">
+
+                        <button class="btn_close">x</button>
+                        <form asp-action="PageBuyNotAuntificate" asp-controller="Shop" method="post">
+                            <div class="modal_window_inpute">
+                                <h2 style="text-align: center;">Записаться на фотоссесию</h2>
+                                <input style="display= none;" name="ProductId" type="text" placeholder="Ваше имя" value="@Model.Id"></input>
+                                <input style="display= none;" name="ProductName" type="text" placeholder="Ваше имя" value="@Model.Name"></input>
+                                <input style="display= none;" name="UserId" type="text" placeholder="Ваше имя" value="0"></input>
+                                <input name="FirstNameUser" type="text" placeholder="Ваше имя"></input>
+                                <input name="SecondNameUser"  type="text" placeholder="Ваша фамилия"></input>
+                                <input name="UserEmail" type="text" placeholder="Ваш Емайл"></input>
+                                <input name="UserNumberPhone" type="text" placeholder="Ваш номер телефона" id="phone"></input>
+                                <label style="font-size: 36px"><input name="UserDate" type="date" id="date"></input><br> Желаймая дата</label>
+                                <textarea name="DescriptionUser" class="textarea_modal" type="text" placeholder="Ваши пожелания"></textarea>
+                                <div class="form_button_div">
+                                    <button class="form_button_button">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+
+        }
+        else
+        {
+            <section class="modals">
+                <div class="modal_overlay">
+                    <div style="height: 500px; margin: 300px 0 300px 0;" class="modal_window" data-target="buy">
+
+                        <button class="btn_close">x</button>
+                        <form asp-action="PageBuyNotAuntificate" asp-controller="Shop" method="post">
+                            <div class="modal_window_inpute">
+                                <h2 style="text-align: center;">Записаться на фотоссесию</h2>
+                                <input style="display: none;" name="ProductId" type="text" placeholder="Ваше имя" value="@Model.Id"></input>
+                                <input style="display: none;" name="UserId" type="text" placeholder="Ваше имя" value="@ViewBag.user.Id"></input>
+                                <input style="display: none;" name="FirstNameUser" type="text" placeholder="Ваше имя" value="@ViewBag.user.UserName"></input>
+                                <input style="display: none;" name="SecondNameUser" type="text" placeholder="Ваша фамилия" value="@ViewBag.user.SecondName"></input>
+                                <input style="display: none;" name="UserEmail" type="text" placeholder="Ваш Емайл" value="@ViewBag.user.Email"></input>
+                                <input style="display: none;" name="ProductName" type="text" placeholder="Ваш Емайл" value="@Model.Name"></input>
+                                <input style="display: none;" name="UserNumberPhone" type="text" placeholder="Ваш номер телефона" id="phone" value="@ViewBag.user.NumberPhone"></input>
+                                <label style="font-size: 36px"><input name="UserDate" type="date" id="date"></input><br> Желаймая дата</label>
+                                <textarea name="DescriptionUser" class="textarea_modal" type="text" placeholder="Ваши пожелания"></textarea>
+                                <div class="form_button_div">
+                                    <button class="form_button_button">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+            
+        }
+
+    </div>
     
-
-
     
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="~/js/EasyTogger.js"></script>
+    <script src="~/js/fslightbox.js"></script>
+    
 </body>

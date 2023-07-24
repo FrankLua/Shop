@@ -11,7 +11,11 @@ namespace DarkStore.Service.Interfaces
 {
     public interface IBasketService:IBaseResponse<Basket>
     {
-        Task<BaseResponce<string>> AddBasket(Basket basket);
-        Task<BaseResponce<Basket>> BuildBasket(BasketModel basketmodel,Product productbasket);
+        Task<BaseResponce<string>> AddBasket(BasketModel basket);
+        Task<BaseResponce<List<Basket>>> GetBasket ();
+        Task<BaseResponce<List<Basket>>> GetBasketbyId(int id);
+
+        Task<BaseResponce<string>> UpdateBasket(Basket basket);
+
     }
 }

@@ -1,157 +1,207 @@
-.headerline {
-    background-color: black;
-    display: flex;
-    align-items: center;
+
+.main {
+    flex-grow: 1;
 }
 
-.Basket {
-    position: relative;
-    border-right: 3px solid white;
-    padding-right: 105px;
-    height: 200px;
-}
-
-.imgBasket {
+.top {
+    left: 0;
+    right: 0;
     position: absolute;
-    top: 40px;
-    right: 10px;
-}
-
-.phonediv {
-    position: relative;
-    height: 80px;
-}
-
-.phone {
-    position: relative;
-}
-
-.phonenumbe {
-    position: absolute;
-    top: 10px;
-}
-
-.phone {
-    position: relative;
-    border-right: 3px splid white;
-    height: 200px;
-    width: 400px;
-}
-
-.phoneimg {
-    position: absolute;
-    top: 40px;
-    width: 125px;
-    height: 113px;
-}
-
-.phoneholder {
-    top: 50px;
-    height: 200px;
-    top: 100 px;
-    display: flex;
-    border-right: 3px solid white;
-}
-
-.num {
-    left: 125px;
-    position: absolute;
-    top: 40px;
-    right: 300 px;
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 600;
-}
-
-.phone-text {
-    position: absolute;
-    top: 500 px;
-    left: 150px;
-    font-size: 26px;
-    font-weight: 600;
-    color: white;
-}
-
-div {
-    color: white;
-}
-
-.navitem {
+    z-index: 5;
     color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 26px;
-    margin-right: 25px;
-}
-
-.Icon {
-    padding-left: 130px;
-    padding-bottom: 10px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 56px;
-    margin-right: 25px;
-}
-
-.store {
-    height: 100vh;
-    background-image: url(/RepositoriiDark/Body.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-.Text-lead {
     text-align: center;
-   justify-content: center;
-    color: black;
-    font-size: 56px;
-    font-weight: 500px;
+    padding-bottom: 50px;
+    margin-top: 247px;
 }
 
-.rowproduct {
+.title {
+    padding-top: 105px;
+    padding-bottom: 40px;
+    font-size: 96px;
+    font-weight: 700;
+    
+}
 
-    margin-top:25px;
-    margin-right: 25px;
+.top_link {
+    left: 0;
+    right: 0;
+    background-color: #151515;
+    padding: 40px;
+    max-width: 430px;
+    width: 100%;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+}
+.swiper-slide {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top,center;
+    height: 100vh;
+}
+.slider{
+    position:relative;
+}
+.mySwiper::after{    
+    content: '';
+    background: rgba(21,21,21,.7);
+    position: absolute;
+    z-index: 4;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+
+.why_lease {
+    padding: 150px 0px;
+}
+
+.why_lease_list {
+    padding-left: 250px;
+    padding-right: 250px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.why_lease_item_img {
+    height: 150px;
+    width: 150px;
+}
+
+.why_lease_item_title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.how_does {
+    padding-bottom: 150px;
+}
+
+.how_does_inner {
+    display: block;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.how_does_minititle {
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 50px;
+}
+
+.how_does_list {
+    text-align: center;
+    padding: 50px 0 70px;
+    counter-reset: MyCounter;
+}
+
+.how_does_item {
+    text-align: center;
+    list-style-type: none;
+    width: 600px;
     position: relative;
-    background-color: black;
-    top:100px;
-    width: 440px;
-    height: 510px;
+    margin-left: auto;
+    box-sizing: content-box;
+    padding: 19px 0 19px 200px;
 }
 
-.text {
-    position: absolute;
-    left: 5px;
-    top: 300px;
-    line-height: 5px;
+
+.how_does_item + .how_does_item {
+    margin-top: 40px;
 }
 
-.imgproduct {
-    width: 440px;
-    height: 300px;
+    .how_does_item::before {
+        counter-increment: MyCounter;
+        content: counter(MyCounter);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        font-size: 60px;
+        font-weight: 700;
+        background-color: black;
+        border-radius: 50%;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+.welcome_video {
+    text-align: center;
 }
 
-.text-product {
-    margin-bottom: 1px;
+.welcome_video_div {
+    display: inline-block;
+    max-width: 1000px;
 }
 
-.buy-product {
-    position: absolute;
-    left: 5px;
-    top: 450px;
-    color: white;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 600;
+.welcome_title {
+    font-size: 48px;
+    text-transform: uppercase;
 }
 
-.store {
+.welcome_minititle {
+    padding: 20px 0 50px 0;
+    font-size: 36px;
 }
 
-body {
-    font-family: 'EB Garamond', serif;
+.welcome_video {
+    padding-bottom: 150px;
+}
+
+.product {
+    text-align: center;
+    margin: 0 23% 0 23%;
+}
+
+.product_row {
+    display: flex;    
+    padding: 50px 0 50px 0;
+}
+
+.product_foto {
+    width: 600px;
+    height: 1200;
+}
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    
+}
+
+.product_link {
+    width: 85%;
+    height: 100px;
+    border: solid black 3px;
+    margin: 0 7.5% 0;
+    padding: 3%;
+    transition: 0.6s;
+    font-size: 36px;
+}
+
+    .product_link:hover {
+        color: white;
+        background-color: black;
+       
+    }
+
+.product_name {
+    font-size: 32px;
+}
+
+.product_description {
+    font-size: 24px;
 }

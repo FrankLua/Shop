@@ -1,76 +1,126 @@
 ﻿<!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebApplication6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">     
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/WebApplication6.styles.css" asp-append-version="true" />
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />
-    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />    
+    <title>Document</title>
 </head>
 <body>
-    <div class="header">
-        <div class="container1">
+    <div class="wrapper">
+    <header class="header">
+        <div class="container">
 
 
             <div class=headerline>
-                <div class="headerlogo">
-                    <img src="/RepositoriiDark/logo.PNG">
-                </div>
+
                 <div class="Menclass">
                     <a class="navitem" href="/Shop/DarkStore">На главную</a>
                     <a class="navitem" href="/Log/Registred">Зарегистрироваться</a>
                     <a class="navitem" href="/Log/Login">Вход</a>
                     <a class="navitem" href="/Log/Logout">Выход</a>
-                    <a class="navitem" href="/PersonInfo/PersonCabinet">Личный кабинет</a>
+                        <a class="navitem" href="/PersonInfo/PersonCabinet">Личный кабинет</a>
                 </div>
-                <div class="Basket">
-                    <a href="#">
-                        <img class="imgBasket" src="/RepositoriiDark/Basket.PNG">
-                    </a>
-
-                </div>
-                <div class="phone">
-                    <div class="phoneholder">
-                        <div class="phonediv">
-                            <a href="#">
-                                <img class="phoneimg" src="/RepositoriiDark/Phone.PNG">
-                            </a>
-                        </div>
-                        <div class=phonenumber><a class="num" href="#">8-913-282-43-31 <br>Свяжитесь с нашим<br> менеджером!</a></div>
-
-                    </div>
-
-                </div>
-                <div class="Icon">
-                    DarkStore
 
 
-                </div>
             </div>
         </div>
-    </div>
-    </div>
 
-    <div >
-        <main role="main" >
+
+        
+
+    </header>
+
+        <main role= "main" >
             @RenderBody()
         </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <nav class="footermenu">
+                <ul class="footermenulist">
+                    <li class="footermenuitems">
+                        <p class="footermenutile">Products</p>
+                    </li>
+                    <li class="footermenuitems"><a href="#" class="footermenulink">Used</a></li>
+                    <li class="footermenuitems"><a href="#" class="footermenulink">New</a></li>
+                    <li class="footermenuitems"><a href="#" class="footermenulink">Менеджер по продажам</a></li>
+                </ul>
+                <ul class="footermenulist">
+                    <li class="footermenuitems">
+                        <p class="footermenutile">Resources</p>
+                    </li>
+                    <li class="footermenuitems"><a href="#" class="footermenulink">Наш блог</a></li>
+                    <li class="footermenuitems"><a href="#" class="footermenulink">FAQ</a></li>
+                    <li class="footermenuitems"><a href="#" class="footermenulink">Contact us</a></li>
+                </ul>
+                <ul class="footermenulist">
+                    <li class="footermenuitems">
+                        <p class="footermenutile">Работы наших людей</p>
+                    </li>
+                    <li class="footermenuitems"><a href="#" class="footermenulink">Поставщики</a></li>
+                    <li class="footermenuitems"><a href="#" class="footermenulink">Партнёры</a></li>
+                </ul>
+                <ul class="footermenulist">
+                    <li class="footermenuitems">
+                        <p class="footermenutile">О нас</p>
+                    </li>
+                    <li class="footermenuitems"><a href="#" class="footermenulink">Команда</a></li>
+                    <li class="footermenuitems"><a href="#" class="footermenulink">Карьера</a></li>
+                </ul>
+
+            </nav>
+            <ul class="app">
+                <li class="app_item">
+                    <a href="" class="app_ite,_link"></a>
+                    <img class="app_item" src="~/Images/WebPages/Lay/app_store.svg" alt="">
+                </li>
+                <li class="app_item">
+                    <a href="" class="app_ite,_link"></a>
+                        <img class="app_item" src="~/Images/WebPages/Lay/google_play.svg" alt="">
+                </li>
+            </ul>
+
+            <div class="footer_copy">
+                <p class="footercopy_text">
+                        В мире, где каждый мгновенье запечатлевается и сохраняется в цифровом пространстве,
+                        студия фотографов остается исключительным местом, где искусство воплощается в красивых 
+                        и глубоких изображениях. Гламурные фотографии моделей, эпические пейзажи, портреты полны 
+                        эмоций — все это можно увидеть и ощутить в стенах нашей великолепной студии.
+                </p>
+                <p class="footercopy_text">
+                        Сотрудничество с нашей студией означает, что вы окунетесь в мир фотографии, где все возможно.
+                        Мы готовы воплотить любую вашу идею и создать настоящий шедевр. Наш подход основан на тесном
+                        взаимодействии с клиентом: мы слушаем ваши пожелания и предлагаем свои идеи, чтобы 
+                        в итоге достичь идеального результата.y.
+                </p>
+
+            </div>
+            <nav class="copy_nav">
+                <ul class="copy_nav_list">
+                    <li class="copy_nav_item">
+                        <a href="#" class="copy_nav_link">Условия обслуживания</a>
+                    </li>
+                    <li class="copy_nav_item"><a href="#" class="copy_nav_link">Privacy Policy</a></li>
+                    <li class="copy_nav_item">
+                        <a href="#" class="copy_nav_link">
+                            Do Not Sell My Personal
+                            Information
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+    </footer>
     </div>
 
-    
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+
+ 
 </body>
+
 </html>

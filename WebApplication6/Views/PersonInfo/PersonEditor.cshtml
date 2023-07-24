@@ -1,34 +1,60 @@
 ﻿@{
     Layout = "/Views/Shared/_Layout.cshtml";
 }
-@Model DarkStore.Domain.Entity.User;
-<dody>
-    <div>
-        <form method="post" enctype="multipart/form-data">
-        <li>Поменять имя <input type="text" name="UserName" /></li>
-         <li>Новый пароль<input type="text" name="Password" /></li>
-    <li>Повторите новый пароль<input type="text" name="ConfirmPassword" /></li>
+@model WebApplication6.Models.EditorModel;
+
+<header>
     
-    <label for="image-file">Choose image:</label>
-    <input type="file" id="image-file" name="Imgform" >
-    <input type="hidden" name = "Email" value="@Model.Email"/>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/Page.css">
+    <link rel="stylesheet" href="~/css/EditUserR.css">
+</header>
+<div class="container">
+    <section class="main_window">
+        <form asp-action="PersonEditor" asp-controller="PersonInfo" method="post" enctype="multipart/form-data">
+            <div class="main_row">
+                <h2>Редактор профиля</h2>
+                <div class="span_div">
+                    <span asp-validation-for="UserName" class="text-danger"></span><br>
+                    <span asp-validation-for="SecondName" class="text-danger"></span><br>
+                    <span asp-validation-for="Password" class="text-danger"></span><br>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span><br>
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span><br>
+                    <span asp-validation-for="Imgform" class="text-danger"></span><br>
 
- <div class="mb-3">
-     <button type ="submit" class="btn btn-primary">Загрузить </button>
+                </div>
+                <div class="form-group">
+                    <input asp-for="UserName" class="form-control" placeholder="Ваше имя" />
+                </div>
+                <div class="form-group">
+                    <input asp-for="SecondName" class="form-control" placeholder="Ваша фамилия" />
+                </div>
+                <div class="form-group">
+                    <input asp-for="Password" class="form-control" placeholder="Пароль" />
 
- </div>
+                </div>
+                <div class="form-group">
+                    <input asp-for="ConfirmPassword" class="form-control" placeholder="Повтор пароля" />
+
+                </div>
+                <div class="form-group">
+                    <input asp-for="PhoneNumber" type="text" placeholder="+7-(___)-___-__-__" id='phone' type="text"></input>
+                </div>
 
 
+                <label for="image-file">Измените свою аватарку</label>
+                <input asp-for="Imgform" class="filestyle" type="file" id="image-file" name="Imgform">
+                <input asp-for="Email" value = "@ViewBag.Email" type="text" style = "visibility:hidden;" />
+                <div class="form_button_button_reg">
+                    <button class="form_button_button">Изменить данные</button>
+                </div>
+                
 
 
-
+            </div>
         </form>
+    </section>
 
-
-
-    </div>
-
-
-
-
-</dody>
+</div>
+<script src="https://unpkg.com/imask"></script>
+<script src="~/js/Register/NumberPhone.js"></script>

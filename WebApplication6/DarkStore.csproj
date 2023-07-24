@@ -8,9 +8,7 @@
 
   <ItemGroup>
     <Folder Include="AppData\" />
-    <Folder Include="Migrations\" />
-    <Folder Include="wwwroot\Images\ProductIMG\" />
-    <Folder Include="wwwroot\RepositoriiDark\" />
+    <Folder Include="wwwroot\UserAcounts\" />
   </ItemGroup>
 
   <ItemGroup>

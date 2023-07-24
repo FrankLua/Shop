@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<DarkStore.Domain.Entity.FeedBack>
+@{
+}
+<header>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/PersonFeedback.css">
+</header>
+
+<div class="container">
+    <section class="window_main">
+        <h2>Мои комментарии и отзывы</h2>
+        <div class="row_wraps">
+            @foreach(var item in Model)
+            {
+                <div class="row">
+                    <div class="img_div">
+                        <img src="@item.Usersrc" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>@item.FirstName @item.SecondName</h3>
+                        <p>
+                            @item.Comments
+                        </p>
+                        <p>@item.Data</p>
+                    </div>
+                    <div class="additional_info" style=">p{color: red;}">
+                        <h2>@item.ProductName</h2>
+                        @if (item.Review == 1)
+                        {
+                            <p style="color:green">Оценка: Рекомендую</p>
+                        }
+                        else
+                        {
+                            <p style="color:red">Оценка: Не рекомендую</p>
+                        }
+
+                    </div>
+
+
+                </div>
+                
+            }
+        </div>
+    </section>
+</div>

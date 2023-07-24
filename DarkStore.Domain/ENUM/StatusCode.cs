@@ -10,7 +10,8 @@ namespace DarkStore.Domain.ENUM
     {
         ProductNotFounds = 1,
         Ok = 200,
-        IternaServerError = 500
+        IternaServerError = 500,
+        UsernotFound = 2,
 
     }
 }

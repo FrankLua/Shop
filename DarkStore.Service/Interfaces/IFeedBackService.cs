@@ -11,6 +11,8 @@ namespace DarkStore.Service.Interfaces
     public interface IFeedBackService:IBaseResponse<FeedBack>
         
     {
-        Task<BaseResponce<string>> AddFeedBack(FeedBack feedback);
+        Task<BaseResponce<string>> AddFeedBack(FeedbackModel feedback);
+
+        Task<BaseResponce<List<FeedBack>>> GetFeedbackId(int id);
     }
 }

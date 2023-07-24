@@ -1,0 +1,53 @@
+
+main {
+    flex-grow: 1;    
+}
+.text-danger {
+    color: red;
+    font-size: 14px;
+}
+.register{
+    color: white;
+    padding: 7% 22% 2% 22%;
+    position: relative;    
+    justify-content: center;
+}
+.register_window{
+    position: relative;
+    justify-content: center;
+    width: auto;
+    height: 1%;
+    background-color: rgb(43, 43, 43);
+    z-index: 3;
+}
+.backgroud > video {   
+    filter: brightness(68%)
+}
+.register_window_inpute{
+   padding: 20px;
+   text-align: center;
+}
+.form-group > input {
+    color: white;
+    font-size: 26px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: white solid 2px;
+    padding: 10px;
+    margin-top: 25px;
+    width: 75%;
+    text-align: center;
+}
+.register_window_inpute > input {
+    color: white;
+    font-size: 26px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: white solid 2px;
+    padding: 10px;
+    margin-top: 25px;
+    width: 75%;
+    text-align: center;
+}

@@ -20,61 +20,30 @@ namespace DarkStore.DAL.Repositories
             _Db = db;
         }
 
-        public async Task<string> AddUser(RegisterModel newuser)
-        {
-            User user = new User { Email = newuser.Email, Password = newuser.Password, UserName = newuser.UserName };
-            Role userRole = await _Db.Roles.FirstOrDefaultAsync(r => r.Name == "user");
-            if (userRole != null)
-                user.Role = userRole;
-            string soursepatch = "C:\\Users\\sosis\\OneDrive\\Рабочий стол\\2323\\WebApplication6\\wwwroot\\AvatarsAcount\\Avatardefault\\Avatar.PNG";
-            string patchfinish = $"C:\\Users\\sosis\\OneDrive\\Рабочий стол\\2323\\WebApplication6\\wwwroot\\AvatarsAcount\\{user.Email}";
-            Directory.CreateDirectory(patchfinish);
-            FileInfo DefImg = new FileInfo(soursepatch);
-            string tempPath = Path.Combine(patchfinish, "Avatar.PNG");
-            DefImg.CopyTo(tempPath, true);
-            user.Img = $"/AvatarsAcount/{user.Email}/Avatar.PNG";
+
+
+        public async Task<string> AddObject(User user)
+        {    
 
             _Db.Users.Add(user);
             await _Db.SaveChangesAsync();
             return "Регистрация прошла успешно";
         }
 
-        public async Task<BaseReponcefeedback> EditUser(EditorModel user)
+        public async Task<string> CheackNumber(string number)
         {
-            try
+            if( await _Db.Users.FirstAsync( c => c.NumberPhone  == number) != null)
             {
-                User OldUser = await _Db.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
-                OldUser.UserName = user.UserName;
-                OldUser.Password = user.Password;
-
-                var fileName = "Avatar.PNG";
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), $"C:\\Users\\sosis\\OneDrive\\Рабочий стол\\2323\\WebApplication6\\wwwroot\\AvatarsAcount\\{user.Email}", fileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await user.Imgform.CopyToAsync(fileStream);
-                }
-                _Db.SaveChanges();
-                string Descreption = "Данные изменены";
-                BaseReponcefeedback baseResponce = new BaseReponcefeedback();
-                baseResponce.Description = Descreption;
-                baseResponce.StatusCode = StatusCode.Ok;
-                return baseResponce;
+                return  "Номер пользователя найден";
             }
-            catch
+            else
             {
-                string Descreption = "Произошла ошибка, данные не записаны (UserRep)";
-                BaseReponcefeedback baseResponce = new BaseReponcefeedback();
-                baseResponce.Description = Descreption;
-                baseResponce.StatusCode = StatusCode.IternaServerError;
-                return baseResponce;
+                return null;
             }
         }
 
-        public IEnumerable<User> GetObjects()
-        {
-            return _Db.Users.ToList();
-        }
+
+
 
         public async Task<User> GetUserFindEmail(string email)
         {
@@ -87,38 +56,65 @@ namespace DarkStore.DAL.Repositories
                 IEnumerable<FeedBack> feedBacks = _Db.feedback.Where(u => u.UserId == user.Id);
                 user.Comments = feedBacks.ToList();
                 IEnumerable<Basket> basketall = _Db.Basket.Where(o => o.UserId == user.Id);
-                IEnumerable<Basket> basketsaction = _Db.Basket.Where(o => o.UserId == user.Id && o.Paid == false);
-                IEnumerable<Basket> basketspaid = _Db.Basket.Where(o => o.UserId == user.Id && o.Paid == true);
-                foreach (Basket basket in basketsaction)
-                {
-                    basket.Product = await _Db.Products.FirstOrDefaultAsync(x => x.Id == basket.IdProduct);
-                }
-                foreach (Basket basket in basketall)
-                {
-                    basket.Product = await _Db.Products.FirstOrDefaultAsync(x => x.Id == basket.IdProduct);
-                }
-                foreach (Basket basket in basketspaid)
-                {
-                    basket.Product = await _Db.Products.FirstOrDefaultAsync(x => x.Id == basket.IdProduct);
-                }
+                
+                
+
+                
+
                 user.Basket = basketall.ToList();
-                user.BasketAction = basketsaction.ToList();
-                user.BasketPaid = basketspaid.ToList();
+      
                 return await Task.FromResult(user);
             }
             
             return await Task.FromResult(user);
         }
 
-        public User GetUserFindId(int id)
+
+
+        public async Task<string> EditUser(User newUser)
         {
-            User user = _Db.Users.FirstOrDefault(u => u.Id == id);
-            return user;
+            _Db.Users.Update(newUser);
+             _Db.SaveChanges();
+            return "Ok";
         }
 
-        Task<User> IUserRep.GetUserFindId(int id)
+        async Task<List<User>> IBaseInterface<User>.GetObjects()
         {
-            throw new NotImplementedException();
+            List<User> Users = await _Db.Users.ToListAsync();
+            foreach (User user in Users)
+            {
+                int roleid = user.RoleId;
+                Role role = await _Db.Roles.FirstOrDefaultAsync(u => u.Id == roleid);
+                user.Role = role;
+                IEnumerable<FeedBack> feedBacks = _Db.feedback.Where(u => u.UserId == user.Id);
+                user.Comments = feedBacks.ToList();
+                IQueryable<Basket> basketall = from Basket in _Db.Basket
+                                          select new Basket()
+                                          {
+                                              Id = Basket.Id,
+                                              FirstNameUser = Basket.FirstNameUser,
+                                              State = Convert.ToBoolean(Basket.State),
+                                              ProductId = Basket.ProductId,
+                                              UserId = Basket.UserId,
+                                              SecondNameUser = Basket.SecondNameUser,
+                                              ProductName = Basket.ProductName,
+                                              DescriptionUser = Basket.DescriptionUser,
+                                              UserNumberPhone = Basket.UserNumberPhone,
+                                              UserEmail = Basket.UserEmail,
+                                              UserDate = Basket.UserDate,
+                                          };
+                basketall = basketall.Where(x => x.UserEmail == user.Email);
+
+                List<Achievment> achievmentslist = _Db.Achievment.Where(x => x.UserEmail == user.Email).ToList();
+                
+                user.Achievements = achievmentslist.ToList();               
+                user.Basket = basketall.ToList();
+
+
+            }
+            return Users;
         }
+
+
     }
 }

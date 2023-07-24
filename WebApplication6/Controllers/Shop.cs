@@ -18,15 +18,14 @@ namespace WebApplication6.Controllers
     public class Shop : Controller
     {
         private readonly IBasketService _basketService;
-        private readonly IFeedBackService _feedbacks;
-        private readonly IOrderService _ordersService;
+        private readonly IFeedBackService _feedbacks;        
         private readonly IUserService _userService;
         private readonly IProductService _productService;
-        public Shop(IUserService userService, IOrderService ordersService, IProductService productService, IBasketService basketService, IFeedBackService feedBack)
+        public Shop(IUserService userService,  IProductService productService, IBasketService basketService, IFeedBackService feedBack)
         {
             _feedbacks = feedBack;
             _productService = productService;
-            _ordersService = ordersService;
+           
             _userService = userService;
             _basketService = basketService;
         }
@@ -55,45 +54,49 @@ namespace WebApplication6.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-           
-        [Authorize(Roles = "user")]
-        [HttpGet]
-        public async Task<IActionResult> Buy(int id)
-        {
-            var user = await _userService.GetUserFindEmail(User.Identity.Name);
-            ViewBag.user = user.Data;
-            var product = await _productService.GetProductById(id);
-            ViewBag.product = product.Data;  
-           return View();
-        }
-         
+
+
+       
+
+
         [HttpPost]
-        
-        public async Task<IActionResult> Buy(BasketModel basketModel)
+        public async Task<IActionResult> PageComent(FeedbackModel feedback)
         {
-            Basket basket = new Basket();
-            if (ModelState.IsValid)
+            if(ModelState.IsValid == true)
             {
-                var productbasket = await _productService.GetProductById(basketModel.IdProduct);
-                var responceBasket = await _basketService.BuildBasket(basketModel, productbasket.Data);
-                Basket Basket = responceBasket.Data;
-                _basketService.AddBasket(Basket);
-                return RedirectToAction("PersonBasket", "PersonInfo");
-            }
-            else
-            {
-                var user = await _userService.GetUserFindEmail(User.Identity.Name);
-                ViewBag.user = user.Data;
-                var product = await _productService.GetProductById(basketModel.IdProduct);
-                ViewBag.product = product.Data;
+                await _feedbacks.AddFeedBack(feedback);
+
             }
 
-            return View(basketModel);
-
+            return RedirectPermanent($"~/Shop/Page/{feedback.ProductId}");
         }
-           
 
-       [HttpGet]
+        
+        public async Task<IActionResult> PageBuyNotAuntificate(BasketModel basket)
+        {
+            if (ModelState.IsValid == true)
+            {
+                await _basketService.AddBasket(basket);
+                return RedirectPermanent($"~/Shop/DarkShop");
+
+            }
+
+            return RedirectPermanent($"~/Shop/Page/{basket.ProductId}");
+        }
+
+
+        [Authorize(Roles = "Клиент")]
+        public async Task<IActionResult> PageBuyAuntificate(BasketModel basket)
+        {
+            if (ModelState.IsValid == true)
+            {
+                
+
+            }
+
+            return RedirectPermanent($"~/Shop/Page/{basket.ProductId}");
+        }
+        [HttpGet]
        public async Task<IActionResult> Page(int id)
        {
            if (User.Identity.Name != null)
@@ -109,15 +112,7 @@ namespace WebApplication6.Controllers
            var product = await _productService.GetProductById(id);
            return View(product.Data);
        }
-        [HttpPost]
-        public async Task<IActionResult> Page(FeedBack feedback )
-       {
-            
-            
-             var responce = await _feedbacks.AddFeedBack(feedback);
-           
-           return RedirectToAction("Page","Shop") ;
-       }
+
        
     }
 }

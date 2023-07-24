@@ -1,4 +1,7 @@
 ﻿using DarkStore.DAL.Interfaces;
+using DarkStore.DAL.Repositories;
+using DarkStore.Domain.Entity;
+using DarkStore.Domain.ENUM;
 using DarkStore.Domain.Response;
 using DarkStore.Service.Interfaces;
 using System;
@@ -13,8 +16,10 @@ namespace DarkStore.Service.Implementation
     public  class UserService : IUserService
     {
         private readonly IUserRep _UserRep;
-        public UserService (IUserRep userRep)
+        private readonly IAchievementRep _AchievementRep;
+        public UserService (IUserRep userRep , IAchievementRep achievementRep)
         {
+            _AchievementRep = achievementRep;
             _UserRep = userRep;
         }
 
@@ -23,7 +28,14 @@ namespace DarkStore.Service.Implementation
             var baseResponce = new BaseResponce<string>();
             try
             {
-                baseResponce.Data = await _UserRep.AddUser(newuser);
+                var list = Achievment.AchievemetBuild(newuser);
+                foreach (var item in list)
+                {
+                     await _AchievementRep.AddObject(item);
+                }
+                User user = new User();
+                user = User.BuildUser(newuser);
+                baseResponce.Data = await _UserRep.AddObject(user);
                 baseResponce.StatusCode = Domain.ENUM.StatusCode.Ok;
                 baseResponce.Description = "";
                 return baseResponce;
@@ -37,10 +49,30 @@ namespace DarkStore.Service.Implementation
             }
         }
 
-        public async Task<BaseReponcefeedback> EditUser(EditorModel editorModel)
+      
+
+        public async Task<string> EditUser(EditorModel editorModel , User oldUser)
         {
-            BaseReponcefeedback baseresponce = await _UserRep.EditUser(editorModel);
-           return baseresponce;
+            BaseResponce<string> baseResponce = new BaseResponce<string>();
+            try
+            {
+
+ 
+                User.EditdUser(editorModel, oldUser);
+                await _UserRep.EditUser(oldUser);
+                string Descreption = "Данные изменены";                
+                baseResponce.Description = Descreption;
+                baseResponce.StatusCode = StatusCode.Ok;
+                return baseResponce.Data;
+            }
+            catch (Exception ex)
+            {
+                string Descreption = "Произошла ошибка, данные не записаны (UserRep)";                
+                baseResponce.Description = Descreption;
+                baseResponce.StatusCode = StatusCode.IternaServerError;
+                return baseResponce.Data;
+            }
+            
         }
 
         public async Task<BaseResponce<User>> GetUserFindEmail(string email)
@@ -48,7 +80,8 @@ namespace DarkStore.Service.Implementation
             var baseResponce = new BaseResponce<User>();
             try
             {
-                User user = await _UserRep.GetUserFindEmail(email);
+                List<User> users = await _UserRep.GetObjects();
+                User user = users.FirstOrDefault(x => x.Email == email);
                 baseResponce.Data = user;
                 baseResponce.StatusCode = Domain.ENUM.StatusCode.Ok;
                 return  baseResponce;
@@ -62,6 +95,34 @@ namespace DarkStore.Service.Implementation
             }
         }
 
+        public async Task<BaseResponce<string>> CheakNumber(string number)
+        {
+            var baseResponce = new BaseResponce<string>();
+            try
+            {
+                baseResponce.Data = await _UserRep.CheackNumber(number);
+                if(baseResponce.Data != null)
+                {
+                    baseResponce.StatusCode = Domain.ENUM.StatusCode.Ok;
+                    baseResponce.Description = "";
+                    return baseResponce;
+                }
+                else
+                {
+                    baseResponce.StatusCode = Domain.ENUM.StatusCode.UsernotFound;
+                    baseResponce.Description = "";
+                    return baseResponce;
 
+                }
+            }
+            catch (Exception ex)
+            {
+                baseResponce.Data = ex.Message;
+                baseResponce.StatusCode = Domain.ENUM.StatusCode.IternaServerError;
+                baseResponce.Description = "";
+                
+                return baseResponce;
+            }
+        }
     }
 }

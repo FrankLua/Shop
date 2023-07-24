@@ -15,10 +15,12 @@ namespace WebApplication6.Controllers
     public class LogController : Controller
     {
         private readonly IUserService _userService;
+        private readonly IAchievementService _achievementService;
 
-        public LogController(IUserService userService)
+        public LogController(IUserService userService, IAchievementService achievementService)
         {
             _userService = userService;
+            _achievementService = achievementService;
               
         }
         [HttpGet]
@@ -32,22 +34,27 @@ namespace WebApplication6.Controllers
         {
             if (ModelState.IsValid)
             {
+                var number = await _userService.CheakNumber(model.PhoneNubmer);
                 var user = await _userService.GetUserFindEmail(model.Email);
 
-                if (user.Data != null)
+                if (user.Data != null && number.StatusCode == DarkStore.Domain.ENUM.StatusCode.Ok)
                 {
                     await Authenticate(user.Data); // аутентификация
 
                     return RedirectToAction("DarkStore","Shop" );
                 }
-                ModelState.AddModelError(nameof(model.Email),"Некорректные логин и(или) пароль");
-                ModelState.AddModelError(nameof(model.Password), "Некорректные логин и(или) пароль");
+                ModelState.AddModelError(nameof(model.Email),"Пароль, номер телефона или имя пользователя не совпадают");
+                ModelState.AddModelError(nameof(model.Password), "Пароль, номер телефона или имя пользователя не совпадают");
             }
+            ModelState.AddModelError(nameof(model.Email), "Некорректные логин, номер и(или) пароль");
+            ModelState.AddModelError(nameof(model.Password), "Некорректные логин, номер и(или) пароль");
             return View(model);
         }
         [HttpGet]
         public IActionResult Registred()
         {
+            //RegisterModel model = new RegisterModel() {ConfirmPassword = "123123", Email = "43242342", Password = "123123", };
+            //var answerAchi = await _achievementService.AddAchievement(model);
             return View();
         }
         [HttpPost]
@@ -56,12 +63,13 @@ namespace WebApplication6.Controllers
         {
             if (ModelState.IsValid)
             {
+                
                 var user = await _userService.GetUserFindEmail(model.Email);
 
 
                 if (user.Data == null)
                 {
-                    var answer = await _userService.AddUser(model);
+                    var answer = await _userService.AddUser(model);                    
                     
                     if (answer.StatusCode == DarkStore.Domain.ENUM.StatusCode.Ok ) 
                     {

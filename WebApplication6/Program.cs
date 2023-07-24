@@ -6,6 +6,7 @@ using WebApplication6.Models;
 using DarkStore.Service.Interfaces;
 using DarkStore.Service.Implementation;
 using Microsoft.Extensions.Options;
+using DarkStore;
 
 namespace WebApplication6
 {
@@ -16,7 +17,7 @@ namespace WebApplication6
             var builder = WebApplication.CreateBuilder(args);
             var connectionString = builder.Configuration["ConnectionStrings:DefaultConnection"];
             builder.Services.AddControllersWithViews();
-            
+            IServiceCollection services = builder.Services;
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                .AddCookie(options => //CookieAuthenticationOptions
                {
@@ -30,16 +31,9 @@ namespace WebApplication6
                 options.UseSqlServer(connectionString);
                 options.UseSqlServer(connectionString, b => b.MigrationsAssembly("DarkStore"));
             });
-            builder.Services.AddScoped<IUserRep, UserRep>();
-            builder.Services.AddScoped<IOrderRep, OrderRep>();
-            builder.Services.AddScoped<IProductRep, ProductRep>();
-            builder.Services.AddScoped<IUserService, UserService>();
-            builder.Services.AddScoped<IOrderService, OrderService>();
-            builder.Services.AddScoped<IProductService, ProductService>();
-            builder.Services.AddScoped<IBasketService,BasketService>();
-            builder.Services.AddScoped<IBasketRep, BasketRep>();
-            builder.Services.AddScoped<IFeedBackRep, FeedBackRep>();
-            builder.Services.AddScoped<IFeedBackService, FeedBackService>();
+            StartapInit.InitializerServices(services);
+            StartapInit.InitializerRepositories(services);
+
             
             var app = builder.Build();
 

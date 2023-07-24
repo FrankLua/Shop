@@ -19,11 +19,5 @@ namespace DarkStore.Domain.Response
         T Data { get; }
             
 
-    }
-    public class BaseReponcefeedback
-    {
-        public string Description { get; set; }
-        public StatusCode StatusCode { get; set; }
-
-    }
+    }    
 }

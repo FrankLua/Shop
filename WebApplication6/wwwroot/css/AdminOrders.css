@@ -1,0 +1,70 @@
+main {
+    background: url(img/Background.jpg) no-repeat center center fixed;
+    color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.window_main {
+    background-color: rgba(35, 35, 35, 0.4);
+    
+    justify-items: center;
+    margin: 4% auto 5% auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;  
+    font-size: 24px;
+    text-align: center;
+    >.table {
+        >table {            
+            >thead {
+                >tr {
+                    
+                    >th {
+                        border: white solid 3px;
+                    }                  
+
+                }
+                
+
+            }
+
+            
+        }
+
+    }
+
+}
+.tb_iacheka{
+    border: white solid 3px;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+.form_button_button{
+    margin: 20px 0 20px 0;
+    position: relative;
+    padding: 20px 60px 20px 60px;
+    font-size: 24px;
+    border-radius: 40px;
+    border: white solid 2px;
+}
+.form_button_button::before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 19, 19, 0.8);
+    color: white;
+    border-radius: 40px;
+    opacity: 0;
+    transition: all .4s ease;
+    content: '';
+}
+.form_button_button:hover::before{
+    opacity: 1;
+}

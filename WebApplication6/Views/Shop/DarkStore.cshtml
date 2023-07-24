@@ -4,37 +4,199 @@
 
 
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
 </head>
 
-
-
-<h1 class="Text-lead">Рабы</h1>
-    <div class="store">
-        
-        
-    @foreach (var item in Model)
-    {
-        <div class="rowproduct">
-            <div class="prduct">
-                <img class="imgproduct" src="@item.SubPreview">
+<main class="main">
+    <section class="top">
+        <div class="container">
+            <h1 class="title">Studio of photographers</h1>
+            <a href="#" class="top_link"> Найти фотографа</a>
+        </div>
+    </section>
+    <div class="slider">
+        <div class="mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(/Images/WebPages/Index/slide1.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(/Images/WebPages/Index/slide2.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(/Images/WebPages/Index/slide3.jpg);"></div>
+                <div class="swiper-slide" style="background-image: url(/Images/WebPages/Index/slide4.jpg);"></div>
             </div>
-            <div class="text">
-                <h2 class="text-product">Название:@item.Title</h2>
-                <h2 class="text-product">Описание:@item.LiteDescription</h2>
-                <h2 class="text-product">Цена:@item.Price</h2>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
 
-            </div>
-            <a class="buy-product" href="/Shop/Page/@item.Id">Узнать подробнее</a>
+    </div>
+    <section class="why_lease">
+        <div class="container">
+            <h2 class="section_title">
+                Почему именно "Студия фотографов"?
+            </h2>
+            <ul class="why_lease_list">
+                <li class=" why_lease_item">
+                    <img src="/Images/WebPages/Index/whylist1.png" alt="" class="why_lease_item_img">
+                    <h3 class="why_lease_item_title">Потому что у нас можно записывать видео</h3>
+                    <p class="why_lease_item_text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Error assumenda fugiat voluptatem neque architecto, laborum veritatis incidunt quidem
+                        cumque a pariatur quaerat aliquam quae earum nostrum dolorem, aut odio nihil?
+                    </p>
 
+                </li>
+                <li class=" why_lease_item">
+                    <img src="/Images/WebPages/Index/whylist2.png" alt="" class="why_lease_item_img">
+                    <h3 class="why_lease_item_title">Потому что у нас лучшая аппаратура</h3>
+                    <p class="why_lease_item_text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Culpa inventore voluptatum laudantium nostrum distinctio, ratione ut! Consequuntur, cum!
+                        Repudiandae modi minima impedit ut id minus quaerat tempora explicabo atque expedita.
+                    </p>
 
+                </li>
+
+            </ul>
+            <ul class="why_lease_list">
+                <li class=" why_lease_item">
+                    <img src="/Images/WebPages/Index/whylist3.png" alt="" class="why_lease_item_img">
+                    <h3 class="why_lease_item_title">Потому что у нас дешевле чем у конкурентов</h3>
+                    <p class="why_lease_item_text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Rerum quisquam quod saepe dicta quam molestias voluptatem mollitia maxime eius et
+                        excepturi, natus reprehenderit sed dolor. Aperiam iste ratione blanditiis eos?
+                    </p>
+
+                </li>
+                <li class=" why_lease_item">
+                    <img src="/Images/WebPages/Index/whylist4.png" alt="" class="why_lease_item_img">
+                    <h3 class="why_lease_item_title">Потому что у нас профессиональные фотографы</h3>
+                    <p class="why_lease_item_text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Distinctio reiciendis facilis deleniti excepturi, quam necessitatibus. Iure nesciunt quo
+                        nisi iusto. Optio impedit fuga quo eligendi inventore rem exercitationem commodi ullam.
+                    </p>
+
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="how_does">
+        <div class="conteiner">
+            <dvi class="how_does_inner">
+                <h2 class="section_title">
+                    Как мы работаем
+                </h2>
+                <p class="how_does_text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est sit vel
+                    illum molestiae possimus ad rerum aut modi dicta quidem, fugiat commodi maiores, soluta
+                    voluptas quod quo explicabo. Quod, similique.
+                </p>
+                <h4 class="how_does_minititle">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, possimus. Itaque vero
+                    impedit excepturi, reprehenderit fugit saepe magnam, amet praesentium quaerat esse nihil
+                    nam, reiciendis similique. Tempora vel rem rerum!
+                </h4>
+                <ol class="how_does_list">
+                    <li class="how_does_item">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Molestias velit quaerat alias quam praesentium nulla soluta ipsam tempora unde minus
+                        modi ipsum a laboriosam quis non dolore, at delectus saepe!
+                    </li>
+                    <li class="how_does_item">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
+                        nulla ipsum voluptas assumenda dolores! Repellat recusandae quod, qui, velit laboriosam
+                        aut quia exercitationem alias eum facere quas ratione quasi distinctio!
+                    </li>
+                    <li class="how_does_item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+                        quaerat. Ullam, nobis, assumenda illo placeat tempora voluptatem quae quod explicabo
+                        laborum praesentium modi aspernatur odio deleniti pariatur, commodi facilis est.
+                    </li>
+                </ol>
+                <p class="how_does_text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero
+                    voluptatem soluta labore molestiae? Voluptates, fugit dolores nostrum quisquam praesentium
+                    molestiae porro harum eos sit. Ad veritatis obcaecati vero laboriosam libero!
+                </p>
         </div>
 
+
+    </section>
+    <section class="welcome_video">
+        <div class="container">
+            <div class="welcome_video_div">
+                <h2 class="welcome_title">
+                    Добро пожаловать в нашу студию
+                </h2>
+                <h4 class="welcome_minititle">
+                    Узнайте о нас немного по-больше
+                </h4>
+                <iframe width="1000" height="500" src="https://www.youtube.com/embed/ljdQyXvU68M?controls=0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </section>
+    <section class="product">
+        <h2 class="product_title">Наши фотографы</h2>
+        
             
+            
+                @for(int i = 1; i<Model.Count ;)
+                {
+                foreach (var item in Model)
+                {
+                    if (i % 2 == 0)
+                    {
+                        <div class="conteiner">
+
+                            <div class="product_row">
+                                <div class="product_info">
+                                    <h4 class="product_name">@item.Name</h4>
+                                    <p class="product_description">
+                                        @item.LiteDescription
+                                    </p>
+                                    <a href="/Shop/Page/@item.Id" class="product_link">Заказать фотосессию</a>
+                                </div>
+                                <img src="@item.SubPreview" alt="" class="product_foto">
+                            </div>
+                        </div>
+                    i++;
+                    }
+				else
+				{
+					<div class="conteiner">
+						<div class="product_row">
+							<img src="@item.SubPreview" alt="" class="product_foto">
+							<div class="product_info">
+								<h4 class="product_name">@item.Name</h4>
+								<p class="product_description">
+									@item.LiteDescription
+								</p>
+                                <a href="/Shop/Page/@item.Id" class="product_link">Заказать фотосессию</a>
+
+							</div>
+						</div>
+					</div>
+					i++;
+				}
+			}
 
 
-    }
-    </div>
+
+
+		}
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="js/site.js"></script>
+
+
+
+
+	</section>
+</main>
     
 
 

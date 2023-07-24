@@ -1,105 +1,127 @@
-.headerline {
-    background-color: black;
-    display: flex;
-    align-items: center;
+
+
+html {
+    box-sizing: border-box;
 }
 
-.Basket {
-    position: relative;
-    border-right: 3px solid white;
-    padding-right: 105px;
-    height: 200px;
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
-.imgBasket {
-    position: absolute;
-    top: 40px;
-    right: 10px;
+html,
+body {
+    font-family: 'EB Garamond', serif;
+    background-color: white;
+    background-image: url(img/Body.jpg);
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
-.phonediv {
-    position: relative;
-    height: 80px;
+ul {
+    list-style-type: none;
+}
+main{
+   flex-grow:1;
+}
+.wrapper{
+    height:100%;
+    display:flex;
+    flex-direction:column;
 }
 
-.phone {
-    position: relative;
+.section_title {
+    margin-bottom: 50px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
 }
 
-.phonenumbe {
-    position: absolute;
-    top: 10px;
-}
-
-.phone {
-    position: relative;
-    border-right: 3px splid white;
-    height: 200px;
-    width: 400px;
-}
-
-.phoneimg {
-    position: absolute;
-    top: 40px;
-    width: 125px;
-    height: 113px;
-}
-
-.phoneholder {
-    top: 50px;
-    height: 200px;
-    top: 100 px;
-    display: flex;
-    border-right: 3px solid white;
-}
-
-.num {
-    left: 125px;
-    position: absolute;
-    top: 40px;
-    right: 300 px;
-    color: white;
+a {
     text-decoration: none;
-    font-size: 30px;
-    font-weight: 600;
+    color: inherit;
 }
 
-.phone-text {
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    left: 0;
+    right: 0;
+    background-color: transparent;
     position: absolute;
-    top: 500 px;
-    left: 150px;
-    font-size: 26px;
-    font-weight: 600;
-    color: white;
+    z-index: 5;
 }
 
-div {
-    color: white;
+.headerline {
+    display: flex;
+    height: 47px;
+    justify-content: center;
 }
 
 .navitem {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 26px;
-    margin-right: 25px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 36px;
 }
 
-.Icon {
-    padding-left: 130px;
-    padding-bottom: 10px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 56px;
-    margin-right: 25px;
+ .navitem:hover {
+        background-color: white;
+        color: black;
+        transition: 0.5s;
+  }
+.form_button_button{
+    cursor:pointer;
+}
+.footer {
+    background-color: #151515;
+    padding: 50px 0 32px;
+    color: white;
 }
 
-body {
-    font-family: 'EB Garamond', serif;
-    background-color: black;
-    background-image: url(/RepositoriiDark/Body.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+.footermenu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.footermenutile {
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 20px;
 }
 
+.footermenuitems + .footermenuitems {
+    padding-top: 20px;
+}
+
+.footermenulist {
+    max-width: 250px;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-bottom: 52px;
+}
+
+.footer_copy {
+    justify-content: center;
+    max-width: 810px;
+    margin: 0 auto 30px;
+}
+
+.footercopy_text {
+    text-align: center
+}
+
+.copy_nav_list {
+    justify-content: center;
+    display: flex;
+    gap: 40px
+}

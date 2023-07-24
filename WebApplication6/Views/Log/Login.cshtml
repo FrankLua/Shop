@@ -5,32 +5,52 @@
     Layout = "/Views/Shared/_Layout.cshtml";
 }
 @model WebApplication6.Models.LoginModel
-
+<header>
+    <link rel="stylesheet" href="~/css/Page.css" />
+    <link rel="stylesheet" href="~/css/Register.css" asp-append-version="true" />
+</header>
 <body class="card-body">
-    <h4>Vxod</h4>
-    <hr />
-    <div class="row" style="color:gray">
-        <form asp-action="Login" asp-controller="Log" method="post">
-            <div class="col-md-4"
+    <div class="container">
+        <div class="video">
+            <div class="backgroud">
+                <video autoplay muted loop preload="auto" class="page_video" src="~/Video//WebPages/Login/200422 _Digital Media Icons_03_4k_047_preview.mp4"></video>
 
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
-              <ul typeof="squaer">
-                    <li colspan="2"><input type="submit" value="Войти" /></li>
+        </div>
+        <section class="register">
+            <form asp-action="Login" asp-controller="Log" method="post">
+                <div class="register_window">
+                    <div class="register_window_inpute">
+                        <h1 style="text-align: center; font-size: 36px;">Авторизация на сайте</h1>
+                        <div class="span_div">
+                            <span asp-validation-for="Email" class="text-danger"></span><br> 
+                            <span asp-validation-for="Password" class="text-danger"></span><br>
+                             <span asp-validation-for="PhoneNubmer" class="text-danger"></span>
+                        </div>
 
-                </ul>
+                        <div class="form-group">                            
+                            <input asp-for="Email" class="form-control" placeholder="Введите ваш Е-Майл" />
+                        </div>
+                        <div class="form-group">                            
+                            <input asp-for="Password" class="form-control" placeholder="Введите ваш пароль" />
+                        </div>
+                        <div class="form-group">
+                            <input asp-for="PhoneNubmer" class="form-control" placeholder="+7-(___)-___-__-__" id='phone' type="text" />
+                        </div>
+                        <div class="form_button_div_reg">
+                            <button class="form_button_button">Войти</button>
+                        </div>
+
+                    </div>
 
 
+                </div>
+            </form>
 
-         </div>
-        </form>
-</body>
+        </section>
+        <script src="https://unpkg.com/imask"></script>
+        <script src="~/js/Login/NumberPhone.js"></script>
+
+    </div>
+    </body>

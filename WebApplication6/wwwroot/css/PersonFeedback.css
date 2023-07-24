@@ -1,0 +1,58 @@
+main {
+    background: url(img/Background.jpg) no-repeat center center fixed;
+    color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.window_main{
+    >h2{
+        font-size: 36px;
+    }
+    background-color: rgba(77, 77, 77, 0.4);    
+    margin: 4% auto 5% auto;    
+    width: 70%;   
+    text-align: center;
+    >.row_wraps{
+        >.row{
+
+            background-color: rgba(2, 2, 2, 0.6);
+            border-radius: 25px;
+            border-top: rgba(237, 233, 233, 0.3) solid 1px ;
+            border-bottom: rgba(237, 233, 233, 0.3) solid 1px ;
+            margin: 10px 0 10px 0;
+            padding: 0 2% 0 2%;
+            display: flex;
+            justify-content:space-between;
+            >.img_div{    
+                
+                >img{
+                    
+                    width: 150px;
+                    height: 100%;
+                }
+            }
+            >.info{
+                padding: 0 2% 0 2%;
+                >h3{
+                    font-size: 24px;
+                }
+                >p{
+                    padding-top: 10px;
+                    font-size: 20px;
+                }
+            }
+            >.additional_info{
+               
+                >p{font-size: 20px;}
+            }
+        }
+
+
+
+
+
+    }
+    
+}

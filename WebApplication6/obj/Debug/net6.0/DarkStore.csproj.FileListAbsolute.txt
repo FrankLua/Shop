@@ -303,7 +303,7 @@ C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\n
 C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
 C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\System.Web.WebPages.dll
 C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
-C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\DarkStore.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\sosis\OneDrive\Рабочий стол\2323\WebApplication6\obj\Debug\net6.0\DarkStore.MvcApplicationPartsAssemblyInfo.cs

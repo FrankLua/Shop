@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace DarkStore.DAL.Interfaces
 {
-    public interface IFeedBackRep : IBaseInterface<string>
+    public interface IFeedBackRep : IBaseInterface<FeedBack>
     {
-        Task<string> AddFeedBack(FeedBack feedBack);
+        
     }
 }

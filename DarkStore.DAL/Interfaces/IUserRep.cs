@@ -10,10 +10,11 @@ namespace DarkStore.DAL.Interfaces
 {
     public interface IUserRep : IBaseInterface<User>
     {
-        Task <User> GetUserFindId(int id);
-        Task <User> GetUserFindEmail(string email);
-        Task <BaseReponcefeedback> EditUser (EditorModel editorModel);
 
-        Task<string> AddUser(RegisterModel newuser);
+        Task <string> EditUser (User editorModel);
+
+        Task<string> CheackNumber(string number);
+
+        
     }
 }

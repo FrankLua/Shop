@@ -1,0 +1,207 @@
+.flex_dachboard{
+    justify-items: center;
+}
+main > .container{
+    background-color: rgba(77, 77, 77, 0.4);
+    
+    justify-items: center;
+    margin: 4% auto 5% auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;  
+    
+    text-align: center; 
+}
+main {
+    background: url(img/Background.jpg) no-repeat center center fixed;
+    color: white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.flex_dachboard{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;    
+}
+.left_dash{
+    width: 23%;
+    font-size: 24px;
+   
+    border-right: rgba(237, 233, 233, 0.3) solid 1px ;
+}
+.ava{
+    padding: 0  5px 10px 10px;
+    >h2{
+        font-size: 40px;
+    }
+
+}
+.right_dash{
+    border-right: rgba(237, 233, 233, 0.3) solid 1px ;
+    width: 23%;
+}
+.center_dash{
+    border-right: rgba(237, 233, 233, 0.3) solid 1px ;
+    width: 54%;
+}
+.type_stydent{
+    display:block;
+}
+.dayprogress{
+    border-bottom: rgba(237, 233, 233, 0.3) solid 1px ;
+    padding: 50px 30px;
+}
+.type_stydent > li{
+    display: flex;
+    >b{font-size: 24px;} 
+    >p{margin-left: 2%; font-size: 24px;}       
+    
+}
+
+.progress_line{
+    >b{
+        display: block;
+        text-align: left;
+        margin-bottom: 15px;
+        font-size: 24px;
+    }
+    >.progress_wraper{
+        display: flex;
+        align-items: center;
+        >.progress_bar{
+            border-radius: 10px;
+            width: 95%;
+            background-color: rgb(38, 40, 66);
+            
+            height: 25px;
+            >.current_progress_bar{                             
+                border-radius: 10px;
+                background-image: linear-gradient(to right, rgb(45, 44, 44), rgb(251, 251, 251));
+            
+                height: inherit;
+            }
+        }
+        >.count_feedback{
+            margin-left: 10px;
+            font-size: 16px;
+        }
+
+    }
+}
+.statistic{
+    >.row{
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        border-bottom: rgba(237, 233, 233, 0.3) solid 1px ;
+    }
+}
+.box_circle_progress{
+    .procent {
+        position: relative;
+        width: 160px;
+        height: 275px;
+        border-radius: 3%;
+        background-color: rgba(2, 2, 2, 0.6);
+        transition-duration: 0.5s;
+        >.number{
+            position: absolute;            
+            width: 100px;
+            height: 100px;
+            display: flex;
+            top:60px;
+            right: 0;
+            
+         
+                      
+
+        }
+        >svg{
+            width: 160px;
+            height: 160px;
+            position: relative;
+            z-index: 2;
+            >circle{
+                width: 100%;
+                height: 100%;
+                fill: none;
+                stroke: rgb(38, 40, 66);
+                stroke-width:12;
+                stroke-linecap: round;
+                &:nth-child(2){
+                    stroke-dasharray:440;
+                    stroke-dashoffset:calc(440 - (440*75) / 100);
+                    stroke: rgb(251, 251, 251);
+                }
+            }
+
+
+    }
+    
+    }
+    >.procent:hover {
+        transform: scale(0.9) ;}
+    }
+    
+
+
+
+.achivments{
+    >h2{
+        padding: 0 0 30px 0;
+    }
+    >.achiwment_wrap{
+        padding: 25px 3% 25px 3%;
+        display: flex;
+        gap: 35px;
+        justify-content: center;
+        >.row_achiwment{
+            
+            border-radius: 25px;
+            padding: 5px;
+            width: 27.5%;
+            height: 175px;
+            background-color: rgba(2, 2, 2, 0.6);
+            transition-duration: 0.5s;
+            >img{
+                width: 45%;
+                height: 80px;
+            }
+        }
+        >.row_achiwment:hover{
+           transform: scale(1.25);
+           
+        }
+    }
+}
+.right_dash{
+ >.settings_user{
+    padding: 0 3% 0 3%;
+    >h2{font-size: 40px;}
+    >.setings{
+        text-align: left;
+        padding: 0 3% 0 3%;
+        font-size: 24px;
+        >ul{
+            
+            >li{
+                margin-top: 15px;
+                padding: 20px;
+                background-color: rgba(2, 2, 2, 0.6);
+                border-radius: 20px;
+                transition-duration: 0.75s;
+
+            }
+            >li:hover{
+                transform: scale(1.15);
+
+            }
+        }
+    }
+ }
+
+}

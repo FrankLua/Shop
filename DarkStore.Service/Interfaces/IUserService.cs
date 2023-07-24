@@ -13,7 +13,9 @@ namespace DarkStore.Service.Interfaces
     public interface IUserService
     {
         public Task<BaseResponce<User>> GetUserFindEmail(string email);
-        public Task<BaseReponcefeedback> EditUser(EditorModel editorModel);
+
+        public Task<BaseResponce<string>> CheakNumber (string number);
+        public Task<string> EditUser(EditorModel editorModel, User oldUser);
 
         public Task<BaseResponce<string>> AddUser(RegisterModel newuser);
         

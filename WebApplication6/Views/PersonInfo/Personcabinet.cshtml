@@ -1,34 +1,141 @@
 ﻿@using DarkStore.Domain.Entity;
-@Model DarkStore.Domain.Entity.User;
+
 @{
     Layout = "/Views/Shared/_Layout.cshtml";
 }
+@model WebApplication6.Models.User
+<header>
+    <link rel="stylesheet" href="~/css/site.css">
+    <link rel="stylesheet" href="~/css/PersonCabinet.css">
+</header>
+@if(ViewBag.Atuntefication == true){
+<div class="container">
+    <div class="wrap_dashbord">
+                    <div class="flex_dachboard">
+                        <div class="left_dash">
+                            <div class="ava">
+                                <h2>Мой аккаунт</h2>
+                                <img style = "width: 80%; height: 225px; " src="@Model.SrcImg" alt="">
+                                <a href="#" class="email">@Model.Email</a>
+                        <p>@Model.SecondName @Model.UserName</p>
+                        <p>@Model.Role.Name</p>
+                            </div>
+                        </div>
+                        
+                        <div class="center_dash">
+                            <div class="statistic">
+                                <h2 style="font-size: 40px">Статистика</h2>
+                                <div class="row">
+                            @foreach (var item in Model.Achievements)
+                            {
+                                <div class="col-lg-3">
+
+                                    <div class="box_circle_progress">
+                                        <div class="procent">
+                                            <svg>
+                                                <circle cx="80" cy="80" r="70"></circle>
+                                                <circle style="stroke-dashoffset:calc(440 - (440*@item.progress) / 100);" cx="80" cy="80" r="70"></circle>
+
+                                            </svg>
+                                            <div class="number">
+                                                <h2>@item.progress<span>%</span></h2>
+                                            </div>
+                                            <h2>До достижения "@item.Name"</h2>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            }                                  
+                                   
+
+                            </div>
+                            <div class="dayprogress">
+                                <ul class="type_stydent">
+
+                                    <li>
+                                        <b>Имя:</b>
+                                        <p>@Model.UserName</p>
+                                    </li>                                    
+                                </ul>
+                                <div class="progress_line">                                    
+                                    <b>Оставленно отзывов</b>
+                                    <div class="progress_wraper">
+                                        <div class="progress_bar">
+                                            <div class="current_progress_bar" style = "width: @(Model.Comments.Count*10)%;"></div>
+                                        </div>
+                                    <div class="count_feedback">@Model.Comments.Count/10 шт</div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="achivments">
+                                <h2>Достижения</h2>
+                                <div class="achiwment_wrap">
+                                @foreach(var item in Model.Achievements)
+                                {
+                                    if(item.progress == 100)
+                                    {
+                                        <div class="row_achiwment">
+                                            <img src="@item.srcImg" alt="">
+                                            <div class="data">@item.DateTime</div>
+                                            <div class="Name">@item.Description</div>
+                                        </div>
+                                        
+                                    }                                   
+                                    
+                                }                              
+                                    
+
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                        <div class="right_dash">
+                            <div class="settings_user">
+                                <h2>Настройки вашего аккаунта</h2>
+                                <div class="setings">
+                                    <ul>
+                                        <li><a href="/PersonInfo/PersonEditor">Поменять данные аккаунта</a></li>
+                                <li><a href="/PersonInfo/FeedbackUser">Посмотреть мои комментарии</a></li>
+                                        <li><a href="/PersonInfo/UserBasket">Посмотреть мои заявки</a></li>
+                                @if (Model.Role.Name == "Админ")
+                                {
+                                    <li><a href="/PersonInfo/AdminBasket">Посмотреть заявки клиентов(админ)</a></li>
+                                }
+                                else
+                                {
+                                    
+                                }
+                            </ul>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
 
 
-<div class="col-lg-4">
-    <a href="/PersonInfo/PersonEditor"> Редактор профиля. </a>
-    <a href="/PersonInfo/PersonBasket"> Корзина. </a>
-    <p>Ваш ник: @Model.UserName</p>
-    <p>Ваша роль: @Model.Role.Name</p>
-    <p>Ваш адресс эл почты: @Model.Email</p>
-    <div>Ваши отзывы на продукты: @foreach(FeedBack item in Model.Comments)
-        {
-            <p>Продукт на который был оставлен отзыв: @item.ProductName</p>
-            <p>Время: @item.Data</p>
-            <p>Рекомендуете ли вы : @if (item.Review == true) {<p> Да рекомендую</p> }
-            else{<p>нет не рекомендую</p>}</p>
-            <p>Комментарии отзыва: @item.Comments</p>
-        }
-    </div>  
-    <form>
-        <p></p>
 
-
-
-
-    </form>
+                </div>
+            </div>
+}else
+{
+    <div style="height: 100vh;position: relative; background-color: rgba(0,0,0, 0.3)">
+        <h1 style=" margin: 0;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+font-size: 56px;
+">
+            Вы не авторизованны
+        </h1>
     </div>
-<div  style="right"><centre><img class="img-thumbnail" src="@Model.Img"</centre></div>
+
+}
+
 
     
 

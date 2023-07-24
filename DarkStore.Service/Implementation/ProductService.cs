@@ -9,7 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WebApplication6.Models;
-using DarkStore.Domain.ModelViews;
+
+using System.Security.Cryptography.X509Certificates;
 
 namespace DarkStore.Service.Implementation
 {
@@ -26,7 +27,7 @@ namespace DarkStore.Service.Implementation
             BaseResponce<string> responce = new BaseResponce<string>();
             try
             {
-                responce.Data = await _ProductRep.AddProduct(newproduct);
+                responce.Data = await _ProductRep.AddObject(newproduct);
                 responce.StatusCode = Domain.ENUM.StatusCode.Ok;
                 return responce;
             }
@@ -38,44 +39,17 @@ namespace DarkStore.Service.Implementation
             }
         }
 
-        public async Task<BaseResponce<Product>> BuildProduct(ProductModel newProduct)
-        {
-            BaseResponce<Product> responce = new BaseResponce<Product>();
-            try
-            {
-                responce.Data = await _ProductRep.BuildProduct (newProduct);
-                responce.StatusCode = Domain.ENUM.StatusCode.Ok;
-                return responce;
-            }
-            catch (Exception ex)
-            {
-                responce.StatusCode = Domain.ENUM.StatusCode.IternaServerError;
-                responce.Description = ex.Message;
-                return responce;
-            }
-        }
 
-        public async Task<BaseResponce<List<SelectListItem>>> GetCountryList()
-        {
-            BaseResponce<List<SelectListItem>> responce = new BaseResponce<List<SelectListItem>>();
-            try
-            {
-                responce.Data = await _ProductRep.GetCountryList();
-                return responce;
-            }
-            catch(Exception ex)
-            {
-                responce.Description = ex.Message;
-                return responce;
-            }
-        }
+
+
 
             public async Task<BaseResponce<Product>> GetProductById(int id)
         {
             BaseResponce<Product> responce = new BaseResponce<Product>();
             try
             {
-                responce.Data = await _ProductRep.GetProductById(id);
+                List<Product> products = await _ProductRep.GetObjects();
+                responce.Data = products.FirstOrDefault(x => x.Id  == id);
                 if (responce.Data == null)
                 {
                     responce.StatusCode = Domain.ENUM.StatusCode.ProductNotFounds;
@@ -101,7 +75,7 @@ namespace DarkStore.Service.Implementation
         {
             BaseResponce<List<Product>> responce = new BaseResponce<List<Product>>();
             try {
-                responce.Data = await _ProductRep.GetProducts();
+                responce.Data = await _ProductRep.GetObjects();
                 if (responce.Data == null)
                 {
                     responce.StatusCode = Domain.ENUM.StatusCode.ProductNotFounds;
@@ -124,30 +98,5 @@ namespace DarkStore.Service.Implementation
             
         }
 
-        public async Task<BaseResponce<string>> SaveProduct(Product newproduct)
-        {
-            BaseResponce<string> responce = new BaseResponce<string>();
-            try
-            {
-                Product oldproduct = await _ProductRep.GetProductById(newproduct.Id);
-                oldproduct.FullDescription = newproduct.FullDescription;
-                oldproduct.LiteDescription = newproduct.LiteDescription;
-                oldproduct.Count = newproduct.Count;
-                oldproduct.Price = newproduct.Price;
-                oldproduct.Title = newproduct.Title;
-                oldproduct.SubPreview = newproduct.SubPreview;
-                oldproduct.CountryId = newproduct.CountryId;
-                
-                responce.Data = await _ProductRep.SaveProduct(oldproduct);
-                responce.StatusCode = Domain.ENUM.StatusCode.Ok;
-                return responce;
-            }
-            catch (Exception ex)
-            {
-                responce.StatusCode = Domain.ENUM.StatusCode.IternaServerError;
-                responce.Data = ex.Message;
-                return responce;
-            }
-        }
     }
 }

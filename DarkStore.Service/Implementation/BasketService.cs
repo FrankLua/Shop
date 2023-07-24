@@ -20,12 +20,12 @@ namespace DarkStore.Service.Implementation
         }
         public Basket Data => throw new NotImplementedException();
 
-        public async Task<BaseResponce<string>> AddBasket(Basket basket)
+        public async Task<BaseResponce<string>> AddBasket(BasketModel basket)
         {
             var baseResponce = new BaseResponce<string>();
             try
-            {
-                baseResponce.Data = await _BasketRepRep.AddBasket(basket);
+            {               
+                baseResponce.Data = await _BasketRepRep.AddObject(Basket.BuildBasket(basket));
                 baseResponce.StatusCode = Domain.ENUM.StatusCode.Ok;
                 baseResponce.Description = "";
                 return baseResponce;
@@ -40,31 +40,75 @@ namespace DarkStore.Service.Implementation
             }
         }
 
-
-
-        public async Task<BaseResponce<Basket>> BuildBasket(BasketModel basketmodel, Product productbasket)
+        public async Task<BaseResponce<List<Basket>>> GetBasket()
         {
-            var baseResponce = new BaseResponce<Basket>();
-            Basket basket = new Basket();
-
+            BaseResponce<List<Basket>> baseResponce = new BaseResponce<List<Basket>>();
             try
             {
-                basket.IdProduct = basketmodel.IdProduct;
-                basket.UserId = basketmodel.UserId;
-                basket.Quantity = basketmodel.Quantity;
-                basket.Product = productbasket;
-                baseResponce.Data = basket;
-                             
-                baseResponce.StatusCode =Domain.ENUM.StatusCode.Ok;
+                baseResponce.Data = await _BasketRepRep.GetObjects();
+                baseResponce.StatusCode = Domain.ENUM.StatusCode.Ok;
                 baseResponce.Description = "";
                 return baseResponce;
+
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                baseResponce.Data = null;
                 baseResponce.StatusCode = Domain.ENUM.StatusCode.IternaServerError;
                 baseResponce.Description = ex.Message;
                 return baseResponce;
+
             }
+
+        }
+
+        public async Task<BaseResponce<List<Basket>>> GetBasketbyId(int id)
+        {
+            BaseResponce<List<Basket>> baseResponce = new BaseResponce<List<Basket>>();
+            try
+            {
+                var list = await _BasketRepRep.GetObjects();                
+                baseResponce.Data = list.Where(x => x.UserId == id).ToList();
+                baseResponce.StatusCode = Domain.ENUM.StatusCode.Ok;
+                baseResponce.Description = "";
+                return baseResponce;
+
+
+            }
+            catch (Exception ex)
+            {
+                baseResponce.Data = null;
+                baseResponce.StatusCode = Domain.ENUM.StatusCode.IternaServerError;
+                baseResponce.Description = ex.Message;
+                return baseResponce;
+
+            }
+        }
+
+        public async Task<BaseResponce<string>> UpdateBasket(Basket basket)
+        {
+            BaseResponce<string> baseResponce = new BaseResponce<string>();
+            try
+            {
+                basket.State = true;
+                await _BasketRepRep.UpdateBasket(basket);
+                baseResponce.Data = "ok";
+                baseResponce.StatusCode = Domain.ENUM.StatusCode.Ok;
+                baseResponce.Description = "";
+                return baseResponce;
+
+
+            }
+            catch (Exception ex)
+            {
+                baseResponce.Data = null;
+                baseResponce.StatusCode = Domain.ENUM.StatusCode.IternaServerError;
+                baseResponce.Description = ex.Message;
+                return baseResponce;
+
+            }
+
         }
     }
 }

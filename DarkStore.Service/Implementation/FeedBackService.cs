@@ -22,12 +22,15 @@ namespace DarkStore.Service.Implementation
 
             public FeedBack Data => throw new NotImplementedException();
 
-            public async Task<BaseResponce<string>> AddFeedBack(FeedBack feedback)
+            public async Task<BaseResponce<string>> AddFeedBack(FeedbackModel feedback)
             {
             BaseResponce<string> baseResponce = new BaseResponce<string>();
+            FeedBack feedbackfull = new FeedBack();
             try
             {
-                baseResponce.Data = await _FeedbackRep.AddFeedBack(feedback);
+
+                FeedbackModel.FeedbackBuild(feedback, feedbackfull);
+                baseResponce.Data = await _FeedbackRep.AddObject(feedbackfull);
                 baseResponce.StatusCode = Domain.ENUM.StatusCode.Ok;
                 baseResponce.Description = "";
                 return baseResponce;
@@ -41,8 +44,32 @@ namespace DarkStore.Service.Implementation
 
             }
         }
-        
- 
-      
+
+        public async Task<BaseResponce<List<FeedBack>>> GetFeedbackId(int id)
+        {
+            BaseResponce<List<FeedBack>> baseResponce = new BaseResponce<List<FeedBack>>();
+            
+            
+            try
+            {
+                List<FeedBack> list1 = new List<FeedBack>();
+                list1 = await _FeedbackRep.GetObjects();                
+                list1.Where(x => x.UserId == id);
+                baseResponce.Data = list1;
+                baseResponce.StatusCode = Domain.ENUM.StatusCode.Ok;
+                baseResponce.Description = "";
+                return baseResponce;
+
+
+            }
+            catch (Exception ex)
+            {
+                baseResponce.Data = null;
+                baseResponce.StatusCode = Domain.ENUM.StatusCode.IternaServerError;
+                baseResponce.Description = "";
+                return baseResponce;
+
+            }
+        }
     }
 }
