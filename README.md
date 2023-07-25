@@ -26,3 +26,7 @@
 </ul>
 <p style = "font-size: 20px">:hammer:The site is designed for automatic management of clients, their registration for receiving services and their further implementation</p>
 <p style = "font-size: 20px"> :icecream:My site tries to be as pleasant and beautiful as possible for users.</p>
+<h2>Аragments from the pages of my site</h3>
+<h3>Fragments Index page</h3>
+<img style = "hight: 100px; width: 200px;"src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/1.JPG?raw=true"></img>
+    <img style = "hight: 100px; width: 200px;" src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/2.JPG?raw=true"></img>
