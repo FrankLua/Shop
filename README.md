@@ -28,5 +28,17 @@
 <p style = "font-size: 20px"> :icecream:My site tries to be as pleasant and beautiful as possible for users.</p>
 <h2>Аragments from the pages of my site</h3>
 <h3>Fragments Index page</h3>
-<img style = "hight: 100px; width: 200px;"src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/1.JPG?raw=true"></img>
-    <img style = "hight: 100px; width: 200px;" src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/2.JPG?raw=true"></img>
+<img src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/1.JPG?raw=true"></img>
+    <img  src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/2.JPG?raw=true"></img>
+    <br>
+    <h3>Fragments Page shop</h3>
+<img src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/3.JPG?raw=true"></img>
+    <img  src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/4.JPG?raw=true"></img>
+    <img  src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/5.JPG?raw=true"></img>
+    <img  src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/6.JPG?raw=true"></img>
+    <br>
+
+<h3>Fragments PersonCabinet page </h3>
+    <img  src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/7.JPG?raw=true"></img>
+    <img  src = "https://github.com/Jok228/Shop/blob/main/ReviewImg/8.JPG?raw=true"></img>
+    
